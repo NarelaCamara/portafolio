@@ -5,7 +5,7 @@ interface Props {}
 export const Sidebar = (props: Props) => {
   return (
     <>
-      <div className="relative flex flex-col bg-clip-border rounded-xl  text-white  w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
+      <div className="flex flex-col bg-clip-border rounded-xl  text-white  w-full max-w-[15rem] p-4 shadow-xl shadow-blue-gray-900/5">
         <nav className="flex flex-col gap-1 min-w-[240px] p-2 font-sans text-base font-normal text-white">
           <div
             role="button"
@@ -72,11 +72,6 @@ export const Sidebar = (props: Props) => {
               </svg>
             </div>
             Example Pages{" "}
-            <div className="grid place-items-center ml-auto justify-self-end">
-              <div className="opacity: 1 relative grid items-center font-sans font-bold uppercase whitespace-nowrap select-none bg-blue-500/20 text-blue-900 py-1 px-2 text-xs rounded-full">
-                <span className="">14</span>
-              </div>
-            </div>
           </div>
           <div
             role="button"
