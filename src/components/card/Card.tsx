@@ -14,7 +14,7 @@ export const Card = (props: Props) => {
   return (
     <section
       onClick={(e) => onClickShowMore()}
-      className="m-4 group rounded-lg border-transparent  transition-colors hover:border-gray-300 hover:bg-gray-100 hover:accent-black:border-neutral-700 hover:dark:bg-neutral-800/30 hover:-translate-y-2  cursor-pointer border"
+      className="m-4 group rounded-lg border-transparent transition-colors hover:opacity-80 hover:text-blue-500 hover:bg-white hover:-translate-y-2 cursor-pointer border "
     >
       <div className="m-8 flex flex-row">
         <div>
