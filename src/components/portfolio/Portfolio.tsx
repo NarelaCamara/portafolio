@@ -8,13 +8,11 @@ interface Props {}
 
 export const Portfolio = (props: Props) => {
   return (
-    <div>
-      <span className="text-2xl font-bold my-8">Portafolio</span>
-
+    <>
       <Card />
       <Card />
       <Card />
       <Card />
-    </div>
+    </>
   );
 };

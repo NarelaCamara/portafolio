@@ -1,7 +1,23 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import { About, Nav, Portfolio, Sidebar } from "@/components";
+import { About, Nav, Portfolio, Section, Sidebar } from "@/components";
+import { Experiencie } from "@/components/experiencie/Experiencie";
 
 export default function Home() {
+  const ITEMS = [
+    {
+      children: <About />,
+      title: "Acerca de mi",
+    },
+    {
+      children: <Portfolio />,
+      title: "Portfolio",
+    },
+    {
+      children: <Experiencie />,
+      title: " Experiencia y conocimientos",
+    },
+  ];
+
   return (
     <html>
       <head>
@@ -12,18 +28,14 @@ export default function Home() {
       </head>
       <body>
         <main className="min-h-screen p-12 flex flex-row relative">
-          <div className="flex flex-col my-32 items-center fixed z-10">
+          <div className="flex flex-col top-60 items-center fixed z-10">
             <Nav />
             <Sidebar />
           </div>
           <div className="px-16 w-2/3 flex flex-col items-center relative left-1/3">
-            <div className="p-24">
-              <About />
-            </div>
-
-            <div className="p-24">
-              <Portfolio />
-            </div>
+            {ITEMS.map((e) => (
+              <Section {...e} key={e.title} />
+            ))}
           </div>
         </main>
       </body>
