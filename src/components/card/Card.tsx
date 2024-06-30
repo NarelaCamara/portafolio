@@ -7,9 +7,10 @@ import Image from "next/image";
 interface Props {
   link?: string;
   image?: any;
+  title: string;
 }
 
-export const Card = (props: Props) => {
+export const Card = ({ link, image, title }: Props) => {
   const [showAll, setshowAll] = useState(false);
   const onClickShowMore = () => {
     setshowAll(!showAll);
@@ -27,14 +28,16 @@ export const Card = (props: Props) => {
             ) : (
               <GoChevronDown size="2.5rem" className="mx-2" />
             )}
-            <span className="text-2xl my-4">Udemy Practicas</span>
-            <GoArrowUpRight size="2.5rem" className="mx-2" />
+            <span className="text-2xl my-4">{title}</span>
+            {link && <GoArrowUpRight size="2.5rem" className="mx-2" />}
           </div>
-          <Image
-            alt="User_photo"
-            className="rounded-sm w-[22rem] h-[12rem] float-right m-2  "
-            src={computer}
-          />
+          {image && (
+            <Image
+              alt="User_photo"
+              className="rounded-sm w-[22rem] h-[12rem] float-right m-2  "
+              src={computer}
+            />
+          )}
           <p
             className={`text-base px-16 justify-start ${
               !showAll

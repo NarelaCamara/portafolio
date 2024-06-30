@@ -9,10 +9,10 @@ interface Props {}
 export const Portfolio = (props: Props) => {
   return (
     <>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      <Card link="www.google.com" image={computer} title="Udemy Practicas" />
+      <Card link="www.google.com" image={computer} title="Udemy Practicas" />
+      <Card link="www.google.com" image={computer} title="Udemy Practicas" />
+      <Card link="www.google.com" image={computer} title="Udemy Practicas" />
     </>
   );
 };
