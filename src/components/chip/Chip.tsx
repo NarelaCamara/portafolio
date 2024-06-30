@@ -1,5 +1,4 @@
 import React from "react";
-import { FaCableCar } from "react-icons/fa6";
 
 interface Props {
   text: string;
