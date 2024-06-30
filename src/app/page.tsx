@@ -11,12 +11,12 @@ export default function Home() {
         ></script>
       </head>
       <body>
-        <main className="min-h-screen p-12 flex flex-row">
-          <div className="flex flex-col my-32 items-center">
+        <main className="min-h-screen p-12 flex flex-row relative">
+          <div className="flex flex-col my-32 items-center fixed z-10">
             <Nav />
             <Sidebar />
           </div>
-          <div className="px-16 w-2/3 flex  items-center">
+          <div className="px-16 w-2/3 flex items-center relative left-1/3">
             {false && <About />}
 
             <Portfolio />
