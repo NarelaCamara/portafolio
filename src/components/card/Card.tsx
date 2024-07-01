@@ -22,14 +22,12 @@ export const Card = ({ link, image, title }: Props) => {
     "Next js",
     "Node js",
     "React natite",
-    "Router dom",
-    "Tailwind",
     "Redux",
   ];
   return (
     <section
       onClick={(e) => onClickShowMore()}
-      className="m-4 group rounded-lg border-transparent transition-colors hover:opacity-80 hover:text-blue-500 hover:bg-white hover:-translate-y-2 cursor-pointer border "
+      className="m-4 group rounded-lg border-transparent cursor-pointer transition-colors  hover:-translate-y-2"
     >
       <div className="m-4 flex flex-row">
         <div>
@@ -40,7 +38,6 @@ export const Card = ({ link, image, title }: Props) => {
               <GoChevronDown size="2.5rem" className="mx-2" />
             )}
             <span className="text-2xl my-4">{title}</span>
-            {link && <GoArrowUpRight size="2.5rem" className="mx-2" />}
           </div>
           {image && (
             <Image
@@ -52,7 +49,7 @@ export const Card = ({ link, image, title }: Props) => {
           <div
             className={
               !showAll
-                ? "max-h-[4.5em] text-ellipsis line-clamp-3  overflow-hidden"
+                ? "max-h-[4.5em] text-ellipsis line-clamp-3 overflow-hidden"
                 : ""
             }
           >
@@ -72,15 +69,14 @@ export const Card = ({ link, image, title }: Props) => {
               mollitia maiores laudantium earum quae blanditiis rem esse amet,
               optio, nesciunt autem, debitis inventore provident placeat minima
             </p>
+          </div>
+          <div className="my-4 px-16 ">
+            <span className="text-lg my-8">Tecnologias</span>
 
-            <div className="my-4 px-16 ">
-              <span className="text-lg my-8">Tecnologias</span>
-
-              <div>
-                {ITEMS.map((e) => (
-                  <Chip key={e} text={e} />
-                ))}
-              </div>
+            <div>
+              {ITEMS.map((e) => (
+                <Chip key={e} text={e} />
+              ))}
             </div>
           </div>
         </div>

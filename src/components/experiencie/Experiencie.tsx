@@ -6,7 +6,9 @@ interface Props {}
 export const Experiencie = (props: Props) => {
   return (
     <>
-      <Card />
+      <Card title="Semi Senior Frontend developer - Accenture" />
+      <Card title="Semi Senior Frontend developer - Adecco" />
+      <Card title="Jr Frontend developer - IT Resources" />
     </>
   );
 };
