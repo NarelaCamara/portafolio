@@ -33,12 +33,14 @@ export const Card = ({ link, image, title, subTitle }: Props) => {
   return (
     <section
       onClick={(e) => onClickShowMore()}
-      className="m-2 group rounded-lg border-transparent cursor-pointer transition-colors"
+      className="my-4 group rounded-lg border-transparent cursor-pointer transition-colors border border-cyan-50"
     >
       <div>
-        <span className="text-lg font-bold px-14 relative top-4">
-          {subTitle}
-        </span>
+        {subTitle && (
+          <span className="text-lg font-bold px-14 relative top-4">
+            {subTitle}
+          </span>
+        )}
         <div className="flex flex-row justify-start items-center">
           {!showAll ? (
             <GoChevronRight size="2.5rem" className="mx-2" />
@@ -50,7 +52,7 @@ export const Card = ({ link, image, title, subTitle }: Props) => {
         {image && (
           <Image
             alt="User_photo"
-            className="rounded-sm w-[12rem] h-[10rem] float-right m-2  "
+            className="rounded-sm w-[18rem] h-[10rem] float-right mx-4"
             src={computer}
           />
         )}
