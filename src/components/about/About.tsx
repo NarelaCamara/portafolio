@@ -12,7 +12,7 @@ export const About = (props: Props) => {
         className="rounded-full w-[20rem] h-[20rem] float-right m-8 "
         src={computer}
       />
-      <p className="justify-start m-8 text-base ">
+      <p className="justify-start text-base ">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
         mollitia maiores laudantium earum quae blanditiis rem esse amet, optio,
         nesciunt autem, debitis inventore provident placeat minima. Voluptas,
