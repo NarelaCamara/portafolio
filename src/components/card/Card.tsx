@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import computer from "../../assets/computer.jpg";
-import { GoArrowUpRight, GoChevronDown, GoChevronRight } from "react-icons/go";
+import { GoChevronDown, GoChevronRight } from "react-icons/go";
 import Image from "next/image";
 import { Chip } from "../chip/Chip";
 

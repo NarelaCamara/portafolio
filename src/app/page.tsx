@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import { About, Nav, Portfolio, Section, Sidebar } from "@/components";
+import { About, Contact, Nav, Portfolio, Section, Sidebar } from "@/components";
 import { Experiencie } from "@/components/experiencie/Experiencie";
 
 export default function Home() {
@@ -14,7 +14,11 @@ export default function Home() {
     },
     {
       children: <Experiencie />,
-      title: " Experiencia y conocimientos",
+      title: "Experiencia y conocimientos",
+    },
+    {
+      children: <Contact />,
+      title: "Contactame",
     },
   ];
 

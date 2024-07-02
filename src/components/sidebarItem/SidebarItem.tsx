@@ -1,6 +1,4 @@
 import React from "react";
-import { GoPerson } from "react-icons/go";
-
 interface Props {
   text: string;
   icon: any;

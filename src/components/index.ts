@@ -5,3 +5,4 @@ export * from "./portfolio/Portfolio";
 export * from "./card/Card";
 export * from "./sidebarItem/SidebarItem";
 export * from "./section/Section";
+export * from "./contact/Contact";
