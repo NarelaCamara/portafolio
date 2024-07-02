@@ -33,7 +33,7 @@ export const Card = ({ link, image, title, subTitle }: Props) => {
   return (
     <section
       onClick={(e) => onClickShowMore()}
-      className="my-4 group rounded-lg border-transparent cursor-pointer transition-colors border border-cyan-50"
+      className="my-8 group rounded-lg border-transparent cursor-pointer transition-colors border border-cyan-50"
     >
       <div>
         {subTitle && (
