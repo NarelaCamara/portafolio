@@ -36,7 +36,7 @@ export const Card = ({ link, image, title, subTitle }: Props) => {
       className="m-2 group rounded-lg border-transparent cursor-pointer transition-colors"
     >
       <div>
-        <span className="text-xl font-bold px-14 relative top-4">
+        <span className="text-lg font-bold px-14 relative top-4">
           {subTitle}
         </span>
         <div className="flex flex-row justify-start items-center">

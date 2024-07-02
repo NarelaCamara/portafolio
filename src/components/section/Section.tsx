@@ -7,8 +7,8 @@ interface Props {
 
 export const Section = ({ title, children }: Props) => {
   return (
-    <div className="min-h-screen flex flex-col flex-nowrap justify-center items-start w-2/3 ">
-      <span className="text-2xl font-bold py-8">{title}</span>
+    <div className="min-h-screen flex flex-col flex-nowrap justify-center items-start w-4/5 pb-16">
+      <span className="text-3xl font-bold py-8">{title}</span>
       <div className="my-4"> {children}</div>
     </div>
   );
