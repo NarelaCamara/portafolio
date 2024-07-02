@@ -9,7 +9,7 @@ interface Props {}
 
 export const Contact = (props: Props) => {
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col">
       <div className="flex flex-row justify-start items-center py-1">
         <FaLinkedin size="2.5rem" className="mx-1" />
         <span className="text-xl">/in/narelacamara</span>

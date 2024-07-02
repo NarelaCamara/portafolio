@@ -33,7 +33,7 @@ export const Card = ({ link, image, title, subTitle }: Props) => {
   return (
     <section
       onClick={(e) => onClickShowMore()}
-      className="m-8 group rounded-lg border-transparent cursor-pointer transition-colors"
+      className="m-2 group rounded-lg border-transparent cursor-pointer transition-colors"
     >
       <div>
         <span className="text-xl font-bold px-14 relative top-4">
@@ -50,7 +50,7 @@ export const Card = ({ link, image, title, subTitle }: Props) => {
         {image && (
           <Image
             alt="User_photo"
-            className="rounded-sm w-[22rem] h-[12rem] float-right m-2  "
+            className="rounded-sm w-[12rem] h-[10rem] float-right m-2  "
             src={computer}
           />
         )}
