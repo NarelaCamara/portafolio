@@ -11,6 +11,7 @@ export const Experiencie = (props: Props) => {
         laudantium earum quae blanditiis rem esse amet, optio, nesciunt autem,
         debitis inventore provident placeat minima Lorem ipsum, dolor sit amet
         provident placeat minima.
+        <b>Ver CV</b>
       </p>
 
       <Card
