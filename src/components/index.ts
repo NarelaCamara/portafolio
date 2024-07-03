@@ -6,3 +6,4 @@ export * from "./card/Card";
 export * from "./sidebarItem/SidebarItem";
 export * from "./section/Section";
 export * from "./contact/Contact";
+export * from "./circle/Circle";

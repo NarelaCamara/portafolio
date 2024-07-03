@@ -1,5 +1,14 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import { About, Contact, Nav, Portfolio, Section, Sidebar } from "@/components";
+import {
+  About,
+  Circle,
+  Contact,
+  Nav,
+  Portfolio,
+  Section,
+  Sidebar,
+} from "@/components";
+
 import { Experiencie } from "@/components/experiencie/Experiencie";
 
 export default function Home() {
@@ -40,6 +49,8 @@ export default function Home() {
             {ITEMS.map((e) => (
               <Section {...e} key={e.title} />
             ))}
+
+            <Circle />
           </div>
         </main>
       </body>
