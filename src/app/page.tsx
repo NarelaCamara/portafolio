@@ -26,7 +26,7 @@ export default function Home() {
     },
     {
       children: <Experiencie />,
-      title: "Experiencia y conocimientos",
+      title: "Experiencia",
     },
     {
       children: <Contact />,
@@ -59,6 +59,9 @@ export default function Home() {
             {ITEMS.map((e) => (
               <Section {...e} key={e.title} />
             ))}
+          </div>
+          <div className=" z-0 ">
+            <Circle />
             <Circle />
           </div>
         </main>
