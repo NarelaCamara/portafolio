@@ -1,6 +1,5 @@
 import React from "react";
 import { SidebarItem } from "../sidebarItem/SidebarItem";
-import { GoBriefcase, GoPerson } from "react-icons/go";
 
 interface Props {}
 
