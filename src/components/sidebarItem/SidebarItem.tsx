@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 interface Props {
-  text: string;
-  icon: any;
+  title: string;
 }
 
-export const SidebarItem = ({ text, icon }: Props) => {
+export const SidebarItem = ({ title }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0.6 }}
@@ -19,7 +19,9 @@ export const SidebarItem = ({ text, icon }: Props) => {
       tabIndex={0}
       className="flex items-stretch w-full p-3 rounded-lg text-start text-lg leading-tight transition-all hover:-translate-y-2 hover:text-blue-400 "
     >
-      {text}
+      <Link href={`#${title}`}>
+       {title}
+      </Link>
     </motion.div>
   );
 };

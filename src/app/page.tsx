@@ -13,26 +13,27 @@ import {
 import { Experiencie } from "@/components/experiencie/Experiencie";
 import { useScroll, motion } from "framer-motion";
 
+export const ITEMS = [
+  {
+    children: <About />,
+    title: "Acerca de mi",
+  },
+  {
+    children: <Portfolio />,
+    title: "Portfolio",
+  },
+  {
+    children: <Experiencie />,
+    title: "Experiencia",
+  },
+  {
+    children: <Contact />,
+    title: "Contactame",
+  },
+];
+
 export default function Home() {
   const { scrollYProgress } = useScroll();
-  const ITEMS = [
-    {
-      children: <About />,
-      title: "Acerca de mi",
-    },
-    {
-      children: <Portfolio />,
-      title: "Portfolio",
-    },
-    {
-      children: <Experiencie />,
-      title: "Experiencia",
-    },
-    {
-      children: <Contact />,
-      title: "Contactame",
-    },
-  ];
 
   return (
     <html>
@@ -59,10 +60,6 @@ export default function Home() {
             {ITEMS.map((e) => (
               <Section {...e} key={e.title} />
             ))}
-          </div>
-          <div className=" z-0 ">
-            <Circle />
-            <Circle />
           </div>
         </main>
       </body>
