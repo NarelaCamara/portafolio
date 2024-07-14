@@ -6,7 +6,7 @@ interface Props {}
 export const Experiencie = (props: Props) => {
   return (
     <>
-      <p className={`text-base justify-start py-4`}>
+      <p className={` text-lg justify-start py-4`}>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
         laudantium earum quae blanditiis rem esse amet, optio, nesciunt autem,
         debitis inventore provident placeat minima Lorem ipsum, dolor sit amet
@@ -14,15 +14,17 @@ export const Experiencie = (props: Props) => {
         <b>Ver CV</b>
       </p>
 
-      <Card
-        title="Semi Senior Frontend developer, Accenture"
-        subTitle=" 2024 - Present"
-      />
+      <div className="flex flex-col">
+        <Card
+          title="Semi Senior Frontend developer, Accenture"
+          subTitle=" 2024 - Present"
+        />
 
-      <Card
-        title="Semi Senior Frontend developer, Accenture"
-        subTitle=" 2024 - Present"
-      />
+        <Card
+          title="Semi Senior Frontend developer, Accenture"
+          subTitle=" 2024 - Present"
+        />
+      </div>
     </>
   );
 };

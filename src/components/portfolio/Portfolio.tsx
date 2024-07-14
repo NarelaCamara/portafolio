@@ -8,11 +8,11 @@ interface Props {}
 
 export const Portfolio = (props: Props) => {
   return (
-    <>
+    <div className="flex flex-row flex-wrap w-2/2">
       <Card link="www.google.com" image={computer} title="Udemy Practicas" />
       <Card link="www.google.com" image={computer} title="Udemy Practicas" />
       <Card link="www.google.com" image={computer} title="Udemy Practicas" />
       <Card link="www.google.com" image={computer} title="Udemy Practicas" />
-    </>
+    </div>
   );
 };
