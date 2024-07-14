@@ -15,7 +15,9 @@ export const Section = ({ title, children }: Props) => {
       id={title}
       className="min-h-screen flex flex-col flex-nowrap justify-center items-start  pb-16"
     >
-      <span className="text-5xl py-8 m-4">{title}</span>
+      {title !== "Acerca de mi" && (
+        <span className="text-5xl py-8 m-4">{title}</span>
+      )}
 
       <motion.div className="m-4 text-clip ">{children}</motion.div>
     </motion.section>

@@ -17,11 +17,9 @@ export const SidebarItem = ({ title }: Props) => {
       whileInView={{ opacity: 1 }}
       role="button"
       tabIndex={0}
-      className="flex items-stretch w-full p-3 rounded-lg text-start text-lg leading-tight transition-all hover:-translate-y-2 hover:text-blue-400 "
+      className="flex items-stretch w-full p-3 rounded-lg text-start text-lg leading-tight transition-all hover:hover-color-and-transition "
     >
-      <Link href={`#${title}`}>
-       {title}
-      </Link>
+      <Link href={`#${title === "Acerca de mi" ? "" : title}`}>{title}</Link>
     </motion.div>
   );
 };
