@@ -11,6 +11,7 @@ import {
 } from "@/components";
 
 import { Experiencie } from "@/components/experiencie/Experiencie";
+import { SessionContextProvider } from "@/helpers/session";
 import { useScroll, motion } from "framer-motion";
 
 export const ITEMS = [
@@ -44,24 +45,26 @@ export default function Home() {
         ></script>
       </head>
       <body>
-        <main className="min-h-screen flex flex-row relative m-24">
-          <div className="fixed w-screen p-0 m-0 top-0">
-            <motion.div
-              style={{ scaleX: scrollYProgress }}
-              className="p-2 bg-gray-200 w-full opacity-15"
-            />
-          </div>
-          <div className="flex flex-col top-60 items-center fixed z-10 ">
-            <Nav />
-            <Sidebar />
-          </div>
+        <SessionContextProvider>
+          <main className="min-h-screen flex flex-row relative m-24">
+            <div className="fixed w-screen p-0 m-0 top-0">
+              <motion.div
+                style={{ scaleX: scrollYProgress }}
+                className="p-2 bg-gray-200 w-full opacity-15"
+              />
+            </div>
+            <div className="flex flex-col top-60 items-center fixed z-10 ">
+              <Nav />
+              <Sidebar />
+            </div>
 
-          <div className="p-24 w-2/3 flex flex-col items-center relative left-1/3">
-            {ITEMS.map((e) => (
-              <Section {...e} key={e.title} />
-            ))}
-          </div>
-        </main>
+            <div className="p-24 w-2/3 flex flex-col items-center relative left-1/3">
+              {ITEMS.map((e) => (
+                <Section {...e} key={e.title} />
+              ))}
+            </div>
+          </main>
+        </SessionContextProvider>
       </body>
     </html>
   );

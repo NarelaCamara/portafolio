@@ -8,18 +8,9 @@ interface Props {}
 
 export const About = (props: Props) => {
   const controls = useDragControls();
-  const ITEMS = [];
+
   return (
     <>
-      {false && (
-        <section className="w-auto bg-white px-8 py-24 text-black">
-          {ITEMS.map((e) => (
-            <FlipText href="#" key={e + 1}>
-              {e}
-            </FlipText>
-          ))}
-        </section>
-      )}
       <div className="flex flex-row-reverse relative w-full">
         <Image
           alt="User_photo"
