@@ -24,7 +24,7 @@ export const Section = ({ title, children }: Props) => {
     <section
       ref={ref}
       id={title}
-      className="min-h-screen flex flex-col flex-nowrap justify-start items-start"
+      className="min-h-screen flex flex-col flex-nowrap justify-center items-start pt-24"
     >
       <span className="text-3xl">{title}</span>
 
