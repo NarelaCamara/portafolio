@@ -8,18 +8,10 @@ interface Props {
 
 export const SidebarItem = ({ title }: Props) => {
   return (
-    <motion.div
-      initial={{ opacity: 0.6 }}
-      whileHover={{
-        scale: 1.1,
-        transition: { duration: 0.2 },
-      }}
-      whileInView={{ opacity: 1 }}
-      role="button"
-      tabIndex={0}
-      className="flex items-stretch w-full p-3 rounded-lg text-start text-lg leading-tight transition-all hover:hover-color-and-transition "
-    >
-      <Link href={`#${title === "Acerca de mi" ? "" : title}`}>{title}</Link>
-    </motion.div>
+    <div className="relative">
+      <span className="items-stretch w-full p-3 rounded-lg text-start leading-tight  inline-block font-normal text-base transition-all duration-[0.5s] transform-gpu hover:font-bold hover:scale-110 hover:translate-x-[-10px]">
+        <Link href={`#${title === "Acerca de mi" ? "" : title}`}>{title}</Link>
+      </span>
+    </div>
   );
 };
