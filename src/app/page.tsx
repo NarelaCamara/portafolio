@@ -56,7 +56,7 @@ export default function Home() {
             <Sidebar />
           </div>
 
-          <div className="px-16 w-2/3 flex flex-col items-center relative left-1/3">
+          <div className="p-24 w-2/3 flex flex-col items-center relative left-1/3">
             {ITEMS.map((e) => (
               <Section {...e} key={e.title} />
             ))}

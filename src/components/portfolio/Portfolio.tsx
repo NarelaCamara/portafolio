@@ -8,11 +8,19 @@ interface Props {}
 
 export const Portfolio = (props: Props) => {
   return (
-    <div className="flex flex-row flex-wrap w-2/2">
-      <Card link="www.google.com" image={computer} title="Udemy Practicas" />
-      <Card link="www.google.com" image={computer} title="Udemy Practicas" />
-      <Card link="www.google.com" image={computer} title="Udemy Practicas" />
-      <Card link="www.google.com" image={computer} title="Udemy Practicas" />
-    </div>
+    <>
+      <p className={` text-lg justify-start`}>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
+        laudantium earum quae blanditiis rem esse amet, optio, nesciunt autem
+        consequuntur! Ipsum atque et voluptas doloremque, quas est ab maxime
+        distinctio magni?
+      </p>
+      <div className="flex flex-row flex-wrap w-2/2 py-12">
+        <Card link="www.google.com" image={computer} title="Udemy Practicas" />
+        <Card link="www.google.com" image={computer} title="Udemy Practicas" />
+        <Card link="www.google.com" image={computer} title="Udemy Practicas" />
+        <Card link="www.google.com" image={computer} title="Udemy Practicas" />
+      </div>
+    </>
   );
 };

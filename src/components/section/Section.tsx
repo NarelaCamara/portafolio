@@ -13,13 +13,11 @@ export const Section = ({ title, children }: Props) => {
   return (
     <motion.section
       id={title}
-      className="min-h-screen flex flex-col flex-nowrap justify-center items-start  pb-16"
+      className="min-h-screen flex flex-col flex-nowrap justify-start items-start"
     >
-      {title !== "Acerca de mi" && (
-        <span className="text-5xl py-8 m-4">{title}</span>
-      )}
+      <span className="text-3xl">{title}</span>
 
-      <motion.div className="m-4 text-clip ">{children}</motion.div>
+      <motion.div className="my-4 text-clip ">{children}</motion.div>
     </motion.section>
   );
 };

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import computer from "../../assets/computer.jpg";
-import { GoChevronDown, GoChevronRight } from "react-icons/go";
+import { GoArrowUpRight, GoChevronDown, GoChevronRight } from "react-icons/go";
 import Image from "next/image";
 import { Chip } from "../chip/Chip";
 import { CardAnimation } from "./CardAnimation";
@@ -33,59 +33,44 @@ export const Card = ({ link, image, title, subTitle }: Props) => {
   ];
   return (
     <CardAnimation>
-      <section onClick={(e) => onClickShowMore()}>
+      <section
+        className="m-8 flex flex-col justify-start"
+        onClick={(e) => onClickShowMore()}
+      >
         {subTitle && (
-          <span className="text-lg font-bold px-14 relative top-4">
-            {subTitle}
-          </span>
+          <span className="text-lg font-bold relative top-4">{subTitle}</span>
         )}
 
-        <div className="flex flex-row justify-center items-center">
-          {!showAll ? (
-            <GoChevronRight size="2.5rem" className="mx-2" />
-          ) : (
-            <GoChevronDown size="2.5rem" className="mx-2" />
-          )}
+        <div className="flex flex-row justify-start items-center">
           <span className="text-2xl my-4">{title}</span>
+          <GoArrowUpRight size="1.5rem" className="mx-2" />
         </div>
 
-        <div className="flex flex-col justify-center  items-center">
+        <div>
           {image && (
             <Image
               alt="User_photo"
-              className="rounded-lg m-4 border-2 w-40"
+              className="rounded-sm w-[15rem] h-[12rem] float-right mt-2 mx-2 mr-4 mb-4 border-2  "
               src={computer}
             />
           )}
-        </div>
-
-        <div
-          className={
-            !showAll
-              ? "max-h-[4.5em] text-ellipsis line-clamp-2 overflow-hidden"
-              : ""
-          }
-        >
-          <p className={` text-base justify-start py-2 `}>
+          <p className={` text-base justify-start`}>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
+            mollitia maiores laudantium earum quae blanditiis rem esse amet,
+            optio, nesciunt autem, debitis inventore provident placeat minima
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
             mollitia maiores laudantium earum quae blanditiis rem esse amet,
             optio, nesciunt autem, debitis inventore provident placeat minima
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
           </p>
 
-          <p className={` text-base justify-start py-2 `}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
-            mollitia maiores laudantium earum quae blanditiis rem esse amet,
-            optio, nesciunt autem, debitis inventore provident placeat minima
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
-          </p>
-        </div>
-
-        <div className=" m-4 w-full ">
-          <div>
-            {ITEMS.map((e) => (
-              <Chip key={e} text={e} />
-            ))}
+          <div className=" my-4 w-full ">
+            <div>
+              {ITEMS.map((e) => (
+                <Chip key={e} text={e} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
