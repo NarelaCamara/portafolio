@@ -12,7 +12,7 @@ import {
 
 import { Experiencie } from "@/components/experiencie/Experiencie";
 import { SessionContextProvider } from "@/helpers/session";
-import { useScroll, motion } from "framer-motion";
+
 
 export const ITEMS = [
   {
@@ -34,7 +34,7 @@ export const ITEMS = [
 ];
 
 export default function Home() {
-  const { scrollYProgress } = useScroll();
+ 
 
   return (
     <html>
@@ -48,10 +48,7 @@ export default function Home() {
         <SessionContextProvider>
           <main className="min-h-screen flex flex-row relative m-24">
             <div className="fixed w-screen p-0 m-0 top-0">
-              <motion.div
-                style={{ scaleX: scrollYProgress }}
-                className="p-2 bg-gray-200 w-full opacity-15"
-              />
+              
             </div>
             <div className="flex flex-col top-60 items-center fixed z-10 ">
               <Nav />

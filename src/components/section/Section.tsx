@@ -1,7 +1,5 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-
 import useInView from "@/helpers/useInView";
 import { useSession } from "@/helpers/session";
 

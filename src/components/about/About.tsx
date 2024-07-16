@@ -1,14 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import computer from "../../assets/computer.jpg";
-import { motion, useDragControls } from "framer-motion";
-import { FlipText } from "../FlipText/FlipText";
 
 interface Props {}
 
 export const About = (props: Props) => {
-  const controls = useDragControls();
-
   return (
     <>
       <div className="flex flex-row-reverse relative w-full">
