@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import useInView from "@/helpers/useInView";
 import { useSession } from "@/helpers/session";
 
@@ -12,10 +12,16 @@ export const Section = ({ title, children }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
   const { updateSectionActive, sectionActive } = useSession();
+  const [change, setChange] = useState(isInView);
 
   useEffect(() => {
     if (!!isInView) {
       updateSectionActive(title);
+      setChange(true);
+    } else if (change) {
+      setTimeout(() => {
+        setChange(false);
+      }, 3000);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView]);
@@ -24,11 +30,13 @@ export const Section = ({ title, children }: Props) => {
     <section
       ref={ref}
       id={title}
-      className="min-h-screen flex flex-col flex-nowrap justify-center items-start pt-24"
+      className={`${isInView ? "animate-fade-slide-in " : "invisible"} ${
+        change ? "" : "fade-slide-out"
+      }  min-h-screen flex flex-col flex-nowrap justify-center items-start pt-24  `}
     >
       <span className="text-3xl">{title}</span>
 
-      <div className="my-4 text-clip ">{children}</div>
+      <div className="my-4 text-clip  ">{children}</div>
     </section>
   );
 };
