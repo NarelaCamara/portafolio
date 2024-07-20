@@ -35,9 +35,9 @@ const TECNOLOGIES_TRANSITION = {
 
 export const Nav = (props: Props) => {
   return (
-    <div className="flex flex-col items-center max-w-[36rem]">
+    <div className="flex flex-col items-center max-lg:top-40  max-lg:relative ">
       <motion.h1 {...NAV_NAME_TRANSITION} className="text-5xl mb-4">
-        Roxana Narela Camara
+        Narela Camara
       </motion.h1>
       <motion.h1 {...NAV_JOB_TRANSITION} className="text-3xl mb-4">
         Semi Senior Frontend developer

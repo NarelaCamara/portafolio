@@ -43,17 +43,20 @@ export default function Home() {
           src="https://example.com/fontawesome/vVERSION/js/all.js"
           data-auto-a11y="true"
         ></script>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
       </head>
       <body>
         <SessionContextProvider>
-          <main className="min-h-screen flex flex-row relative mx-24">
-            <div className="fixed w-screen p-0 m-0 top-0"></div>
-            <div className="flex flex-col top-60 items-center fixed z-10 ">
+          <main className="min-h-screen px-6 max-lg:bg-red-700 bg-blue-600">
+            <div className=" flex flex-col items-center xl:fixed z-10 xl:w-1/3 xl:top-60 max-lg:top-10 ">
               <Nav />
               <Sidebar />
             </div>
 
-            <div className="px-24 w-2/3 flex flex-col items-center relative left-1/3 ">
+            <div className="px-12 xl:w-2/3  max-lg:w-full flex flex-col items-center relative xl:left-1/3 ">
               {ITEMS.map((e) => (
                 <Section {...e} key={e.title} />
               ))}
