@@ -3,11 +3,11 @@ import React from "react";
 import computer from "../../assets/computer.jpg";
 
 interface Props {}
-
+//max-xl:bg-red-700
 export const About = (props: Props) => {
   return (
     <>
-      <div className="flex flex-row-reverse relative w-full">
+      <div className="flex max-md:flex-col flex-row-reverse relative w-full">
         <Image
           alt="User_photo"
           className="rounded-full border-8 m-2 w-[20rem] h-[20rem] top-250 "

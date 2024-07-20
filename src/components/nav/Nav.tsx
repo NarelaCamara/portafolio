@@ -35,7 +35,7 @@ const TECNOLOGIES_TRANSITION = {
 
 export const Nav = (props: Props) => {
   return (
-    <div className="flex flex-col items-center max-xl:top-24  max-xl:relative ">
+    <div className="flex flex-col items-center max-xl:top-24 max-xl:py-12  max-xl:relative ">
       <motion.h1 {...NAV_NAME_TRANSITION} className="text-5xl mb-4">
         Narela Camara
       </motion.h1>
