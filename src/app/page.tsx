@@ -13,7 +13,6 @@ import {
 import { Experiencie } from "@/components/experiencie/Experiencie";
 import { SessionContextProvider } from "@/helpers/session";
 
-
 export const ITEMS = [
   {
     children: <About />,
@@ -34,8 +33,6 @@ export const ITEMS = [
 ];
 
 export default function Home() {
- 
-
   return (
     <html>
       <head>
@@ -51,12 +48,12 @@ export default function Home() {
       <body>
         <SessionContextProvider>
           <main className="min-h-screen px-6 max-lg:bg-red-700 bg-blue-600">
-            <div className=" flex flex-col items-center xl:fixed z-10 xl:w-1/3 xl:top-60 max-lg:top-10 ">
+            <div className=" flex flex-col items-center lg:fixed z-10 lg:w-1/3 lg:top-60 max-lg:top-10 ">
               <Nav />
               <Sidebar />
             </div>
 
-            <div className="px-12 xl:w-2/3  max-lg:w-full flex flex-col items-center relative xl:left-1/3 ">
+            <div className="px-12 lg:w-2/3  max-lg:w-full flex flex-col items-center relative lg:left-1/3 ">
               {ITEMS.map((e) => (
                 <Section {...e} key={e.title} />
               ))}
