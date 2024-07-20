@@ -15,7 +15,7 @@ export const Portfolio = (props: Props) => {
         consequuntur! Ipsum atque et voluptas doloremque, quas est ab maxime
         distinctio magni?
       </p>
-      <div className="flex flex-row flex-wrap w-2/2 p-16">
+      <div className="flex flex-row flex-wrap xl:w-2/2 xl:p-16">
         <Card link="www.google.com" image={computer} title="Udemy Practicas" />
         <Card link="www.google.com" image={computer} title="Udemy Practicas" />
         <Card link="www.google.com" image={computer} title="Udemy Practicas" />

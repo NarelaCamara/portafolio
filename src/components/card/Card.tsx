@@ -31,10 +31,11 @@ export const Card = ({ link, image, title, subTitle }: Props) => {
     "React natite",
     "Redux",
   ];
+  //max-xl:bg-red-700 xl:bg-blue-600
   return (
     <CardAnimation>
       <section
-        className="m-8 flex flex-col justify-start"
+        className="m-2 flex flex-col justify-start"
         onClick={(e) => onClickShowMore()}
       >
         {subTitle && (

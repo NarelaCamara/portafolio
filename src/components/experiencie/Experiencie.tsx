@@ -14,7 +14,7 @@ export const Experiencie = (props: Props) => {
         <b>Ver CV</b>
       </p>
 
-      <div className="flex flex-col m-16">
+      <div className="flex flex-col xl:m-16">
         <Card
           title="Semi Senior Frontend developer, Accenture"
           subTitle=" 2024 - Present"
