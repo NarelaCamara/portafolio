@@ -14,7 +14,7 @@ export const About = (props: Props) => {
           src={computer}
         />
         <div className="flex flex-col justify-start w-full ">
-          <p className={` text-lg justify-start pb-8`}>
+          <p className={` text-base justify-start pb-8`}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
             laudantium earum quae blanditiis rem esse amet, optio, nesciunt
             autem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
@@ -22,7 +22,7 @@ export const About = (props: Props) => {
             magni consequuntur! Ipsum atque et voluptas doloremque, quas est ab
             maxime distinctio magni?
           </p>
-          <p className={` text-lg justify-start pb-8`}>
+          <p className={` text-base justify-start pb-8`}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
             laudantium earum quae blanditiis rem esse amet, optio, nesciunt
             autem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
@@ -30,7 +30,7 @@ export const About = (props: Props) => {
             magni consequuntur! Ipsum atque et voluptas doloremque, quas est ab
             maxime distinctio magni?
           </p>
-          <p className={` text-lg justify-start pb-8`}>
+          <p className={` text-base justify-start pb-8`}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
             laudantium earum quae blanditiis rem esse amet, optio, nesciunt ,
             quas est ab maxime distinctio magni?

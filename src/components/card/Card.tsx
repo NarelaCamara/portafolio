@@ -8,13 +8,13 @@ import { CardAnimation } from "./CardAnimation";
 import { FaGithub, FaGlobe } from "react-icons/fa6";
 
 interface Props {
-  link?: string;
+  links?: Array<{ text: string; icon: string }>;
   subTitle?: string;
   image?: any;
   title: string;
 }
 
-export const Card = ({ link, image, title, subTitle }: Props) => {
+export const Card = ({ links, image, title, subTitle }: Props) => {
   const [showAll, setshowAll] = useState(false);
   const onClickShowMore = () => {
     setshowAll(!showAll);
@@ -45,27 +45,29 @@ export const Card = ({ link, image, title, subTitle }: Props) => {
 
         <div className="flex flex-row justify-start items-center">
           <span className="text-2xl my-4">{title}</span>
-          <div className="flex flex-row">
-            <button
-              className="middle none center flex items-center justify-center rounded p-1 m-2 font-sans text-xs font-bold uppercase text-white transition-all hover:bg-slate-50/10 active:bg-slate-0/300 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-              data-ripple-dark="true"
-            >
-              <FaGithub
-                size="2rem"
-                className="fas fa-heart text-lg leading-none"
-              />
-            </button>
+          {links && (
+            <div className="flex flex-row">
+              <button
+                className="middle none center flex items-center justify-center rounded p-1 m-2  text-xs font-bold uppercase text-white transition-all hover:bg-slate-50/10 active:bg-slate-0/300 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                data-ripple-dark="true"
+              >
+                <FaGithub
+                  size="2rem"
+                  className="fas fa-heart text-lg leading-none"
+                />
+              </button>
 
-            <button
-              className="middle none center flex items-center justify-center rounded p-1 m-2 font-sans text-xs font-bold uppercase text-white transition-all hover:bg-slate-50/10 active:bg-slate-0/300 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-              data-ripple-dark="true"
-            >
-              <FaGlobe
-                size="2rem"
-                className="fas fa-heart text-lg leading-none"
-              />
-            </button>
-          </div>
+              <button
+                className="middle none center flex items-center justify-center rounded p-1 m-2  text-xs font-bold uppercase text-white transition-all hover:bg-slate-50/10 active:bg-slate-0/300 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                data-ripple-dark="true"
+              >
+                <FaGlobe
+                  size="2rem"
+                  className="fas fa-heart text-lg leading-none"
+                />
+              </button>
+            </div>
+          )}
         </div>
 
         <div>
@@ -76,7 +78,7 @@ export const Card = ({ link, image, title, subTitle }: Props) => {
               src={computer}
             />
           )}
-          <p className={` text-base justify-start`}>
+          <p className={` text-sm justify-start`}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
             mollitia maiores laudantium earum quae blanditiis rem esse amet,
             optio, nesciunt autem, debitis inventore provident placeat minima
