@@ -5,6 +5,7 @@ import { GoArrowUpRight, GoChevronDown, GoChevronRight } from "react-icons/go";
 import Image from "next/image";
 import { Chip } from "../chip/Chip";
 import { CardAnimation } from "./CardAnimation";
+import { FaGithub, FaGlobe } from "react-icons/fa6";
 
 interface Props {
   link?: string;
@@ -44,7 +45,27 @@ export const Card = ({ link, image, title, subTitle }: Props) => {
 
         <div className="flex flex-row justify-start items-center">
           <span className="text-2xl my-4">{title}</span>
-          <GoArrowUpRight size="1.5rem" className="mx-2" />
+          <div className="flex flex-row">
+            <button
+              className="middle none center flex items-center justify-center rounded p-1 m-2 font-sans text-xs font-bold uppercase text-white transition-all hover:bg-slate-50/10 active:bg-slate-0/300 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              data-ripple-dark="true"
+            >
+              <FaGithub
+                size="2rem"
+                className="fas fa-heart text-lg leading-none"
+              />
+            </button>
+
+            <button
+              className="middle none center flex items-center justify-center rounded p-1 m-2 font-sans text-xs font-bold uppercase text-white transition-all hover:bg-slate-50/10 active:bg-slate-0/300 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              data-ripple-dark="true"
+            >
+              <FaGlobe
+                size="2rem"
+                className="fas fa-heart text-lg leading-none"
+              />
+            </button>
+          </div>
         </div>
 
         <div>
