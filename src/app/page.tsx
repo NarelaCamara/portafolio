@@ -2,7 +2,6 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import {
   About,
-  Circle,
   Contact,
   Nav,
   Portfolio,
