@@ -10,7 +10,8 @@ const config: Config = {
     extend: {
       animation: {
         "fade-slide-in": "myAnim1 1s ease-in-out",
-        "fade-slide-out": "myAnim2 2.5s ease-in-out",
+        "fade-slide-out": "myAnim2 1s ease-in-out",
+        "focus-in-contract": "focus-in-contract 1s linear",
       },
       keyframes: {
         myAnim1: {
@@ -20,6 +21,17 @@ const config: Config = {
         myAnim2: {
           "0%": { opacity: "1", transform: "translateY(0)" },
           "100%": { opacity: "0", transform: "translateY(-50px)" },
+        },
+        "focus-in-contract": {
+          "0%": {
+            letterSpacing: "1em",
+            filter: "blur(12px)",
+            opacity: "0",
+          },
+          "100%": {
+            filter: "blur(0)",
+            opacity: "1",
+          },
         },
       },
       backgroundImage: {
