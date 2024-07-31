@@ -49,7 +49,7 @@ export default function Home() {
         <SessionContextProvider>
           <main className="min-h-screen px-6 max-w-[250rem]">
             <Animation className="top-0" />
-            <div className=" flex flex-col items-center xl:fixed z-10 xl:w-1/3 xl:top-60 max-xl:top-10 ">
+            <div className=" flex flex-col items-center xl:fixed z-10 xl:w-1/3 xl:top-64 max-xl:top-10 ">
               <Nav />
               <Sidebar />
               <Animation className="bottom-0 left-0" />

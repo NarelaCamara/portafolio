@@ -10,7 +10,7 @@ export const About = (props: Props) => {
       <div className="flex max-md:flex-col flex-row-reverse relative w-full">
         <Image
           alt="User_photo"
-          className="rounded-full border-8 m-2 w-[20rem] h-[20rem] top-250 "
+          className="rounded-full border-2 m-2 w-[20rem] h-[20rem] top-250 "
           src={computer}
         />
         <div className="flex flex-col justify-start w-full ">
