@@ -7,3 +7,4 @@ export * from "./sidebarItem/SidebarItem";
 export * from "./section/Section";
 export * from "./contact/Contact";
 export * from "./circle/Circle";
+export * from "./animation/Animation";

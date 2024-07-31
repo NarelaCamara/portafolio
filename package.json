@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "canvas-sketch": "^0.7.7",
+    "canvas-sketch-util": "^1.10.0",
     "framer-motion": "^11.2.12",
     "next": "14.2.4",
     "react": "^18",

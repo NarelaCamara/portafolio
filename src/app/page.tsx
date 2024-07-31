@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import {
   About,
-  Circle,
+  Animation,
   Contact,
   Nav,
   Portfolio,
@@ -48,6 +48,7 @@ export default function Home() {
       <body>
         <SessionContextProvider>
           <main className="min-h-screen px-6 max-w-[250rem]">
+            <Animation />
             <div className=" flex flex-col items-center xl:fixed z-10 xl:w-1/3 xl:top-60 max-xl:top-10 ">
               <Nav />
               <Sidebar />
