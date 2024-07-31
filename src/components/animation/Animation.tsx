@@ -5,7 +5,12 @@ import canvasSketch from "canvas-sketch";
 import random from "canvas-sketch-util/random";
 import math from "canvas-sketch-util/math";
 
-interface Props {}
+const width = 320;
+const height = 320;
+
+interface Props {
+  className?: string;
+}
 
 class Effect {
   width: number;
@@ -103,7 +108,7 @@ class CircleEffect {
   }
 
   draw(context: any) {
-    context.fillStyle = "black";
+    context.fillStyle = "white";
     if (this.effect.length > 0) {
       this.effect.forEach((element) => {
         element.draw(context);
@@ -112,12 +117,12 @@ class CircleEffect {
   }
 }
 
-export const Animation = (props: Props) => {
+export const Animation = ({ className }: Props) => {
   const canvasRef = useRef(null);
-  const circleEffectRef = useRef(new CircleEffect(1080, 1080));
+  const circleEffectRef = useRef(new CircleEffect(width, height));
 
   const settings = {
-    dimensions: [1080, 1080],
+    dimensions: [width, height],
     animate: true,
   };
 
@@ -128,7 +133,6 @@ export const Animation = (props: Props) => {
 
     const sketch = () => {
       return ({ context, width, height }: any) => {
-        context.fillStyle = "white";
         context.fillRect(0, 0, width, height);
         circleEffectRef.current.draw(context);
       };
@@ -143,5 +147,7 @@ export const Animation = (props: Props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <canvas ref={canvasRef}></canvas>;
+  return (
+    <canvas ref={canvasRef} className={` ${className} -z-10 fixed`}></canvas>
+  );
 };
