@@ -4,13 +4,13 @@ import {
   About,
   Animation,
   Contact,
+  Experiencie,
   Nav,
   Portfolio,
   Section,
   Sidebar,
 } from "@/components";
 
-import { Experiencie } from "@/components/experiencie/Experiencie";
 import { SessionContextProvider } from "@/helpers/session";
 
 export const ITEMS = [
@@ -48,11 +48,9 @@ export default function Home() {
       <body>
         <SessionContextProvider>
           <main className="min-h-screen px-6 max-w-[250rem]">
-            <Animation className="top-0" />
             <div className=" flex flex-col items-center xl:fixed z-10 xl:w-1/3 xl:top-64 max-xl:top-10 ">
               <Nav />
               <Sidebar />
-              <Animation className="bottom-0 left-0" />
             </div>
 
             <div className="px-12 xl:w-2/3    max-xl:w-full flex flex-col items-center relative xl:left-1/3 ">
