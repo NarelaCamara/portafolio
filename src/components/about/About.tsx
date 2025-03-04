@@ -2,9 +2,12 @@ import Image from "next/image";
 import React from "react";
 import computer from "../../assets/computer.jpg";
 
-interface Props {}
+interface Props {
+  description: string;
+}
 //max-xl:bg-red-700
-export const About = (props: Props) => {
+export const About = ({ description }: Props) => {
+  const description_split = description.split(/\*/);
   return (
     <>
       <div className="flex max-md:flex-col flex-row-reverse relative w-full">
@@ -14,27 +17,13 @@ export const About = (props: Props) => {
           src={computer}
         />
         <div className="flex flex-col justify-start w-full ">
-          <p className={` text-base justify-start pb-8`}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
-            laudantium earum quae blanditiis rem esse amet, optio, nesciunt
-            autem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-            incidunt laborum animi repellendus natus magnam praesentium impedit
-            magni consequuntur! Ipsum atque et voluptas doloremque, quas est ab
-            maxime distinctio magni?
-          </p>
-          <p className={` text-base justify-start pb-8`}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
-            laudantium earum quae blanditiis rem esse amet, optio, nesciunt
-            autem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-            incidunt laborum animi repellendus natus magnam praesentium impedit
-            magni consequuntur! Ipsum atque et voluptas doloremque, quas est ab
-            maxime distinctio magni?
-          </p>
-          <p className={` text-base justify-start pb-8`}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
-            laudantium earum quae blanditiis rem esse amet, optio, nesciunt ,
-            quas est ab maxime distinctio magni?
-          </p>
+          {description_split.map((e: string) => {
+            return (
+              <p key={e} className={` text-base justify-start pb-8`}>
+                {e}
+              </p>
+            );
+          })}
         </div>
       </div>
     </>
