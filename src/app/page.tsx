@@ -53,7 +53,7 @@ export default function Home() {
               <Sidebar />
             </div>
 
-            <div className="px-12 xl:w-2/3    max-xl:w-full flex flex-col items-center relative xl:left-1/3 ">
+            <div className="px-12 xl:w-2/4    max-xl:w-full flex flex-col items-center relative xl:left-1/3 ">
               <Animation className="right-0" />
               {ITEMS.map((e) => (
                 <Section {...e} key={e.title} />
