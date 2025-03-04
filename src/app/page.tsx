@@ -12,10 +12,11 @@ import {
 } from "@/components";
 
 import { SessionContextProvider } from "@/helpers/session";
+import { description } from "@/utils/utils";
 
 export const ITEMS = [
   {
-    children: <About />,
+    children: <About description={description} />,
     title: "Acerca de mi",
   },
   {
