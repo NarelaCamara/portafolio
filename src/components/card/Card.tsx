@@ -71,7 +71,7 @@ export const Card = ({ links, image, title, subTitle }: Props) => {
               />
             </div>
           )}
-          <p className={`my-3  text-sm justify-start`}>
+          <p className={`my-3  text-base justify-start`}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
             mollitia maiores laudantium earum quae blanditiis rem esse amet,
             optio, nesciunt autem, debitis inventore provident placeat minima
