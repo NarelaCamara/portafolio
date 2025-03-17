@@ -10,7 +10,7 @@ export const About = ({ description }: Props) => {
   const description_split = description.split(/\*/);
   return (
     <>
-      <div className="flex max-md:flex-col flex-row-reverse relative w-full">
+      <div className="flex max-md:flex-col flex-row-reverse relative w-full custom: ">
         <Image
           alt="User_photo"
           className="rounded-full border-2 m-2 w-[20rem] h-[20rem] top-250 "

@@ -4,7 +4,6 @@ import computer from "../../assets/computer.jpg";
 import { GoArrowUpRight, GoChevronDown, GoChevronRight } from "react-icons/go";
 import Image from "next/image";
 import { Chip } from "../chip/Chip";
-import { CardAnimation } from "./CardAnimation";
 import { FaGithub, FaGlobe } from "react-icons/fa6";
 
 interface Props {
@@ -34,7 +33,7 @@ export const Card = ({ links, image, title, subTitle }: Props) => {
   ];
   //max-xl:bg-red-700 xl:bg-blue-600
   return (
-    <CardAnimation>
+    <div className=" m-2 block max-w-xl p-6  border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100   dark:hover:bg-slate-900">
       <section
         className="m-2 flex flex-col justify-start"
         onClick={(e) => onClickShowMore()}
@@ -42,43 +41,37 @@ export const Card = ({ links, image, title, subTitle }: Props) => {
         {subTitle && (
           <span className="text-lg font-bold relative top-4">{subTitle}</span>
         )}
+        <span className="text-2xl my-4">{title}</span>{" "}
+        {links && (
+          <div className="inline-flex rounded-md shadow-xs" role="group">
+            <button
+              type="button"
+              className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+            >
+              <FaGithub size="3rem" className="w-3 h-3 me-2" />
+              Git hub
+            </button>
 
-        <div className="flex flex-row justify-start items-center">
-          <span className="text-2xl my-4">{title}</span>
-          {links && (
-            <div className="flex flex-row">
-              <button
-                className="middle none center flex items-center justify-center rounded p-1 m-2  text-xs font-bold uppercase text-white transition-all hover:bg-slate-50/10 active:bg-slate-0/300 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                data-ripple-dark="true"
-              >
-                <FaGithub
-                  size="2rem"
-                  className="fas fa-heart text-lg leading-none"
-                />
-              </button>
-
-              <button
-                className="middle none center flex items-center justify-center rounded p-1 m-2  text-xs font-bold uppercase text-white transition-all hover:bg-slate-50/10 active:bg-slate-0/300 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                data-ripple-dark="true"
-              >
-                <FaGlobe
-                  size="2rem"
-                  className="fas fa-heart text-lg leading-none"
-                />
-              </button>
-            </div>
-          )}
-        </div>
-
+            <button
+              type="button"
+              className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+            >
+              <FaGlobe size="2rem" className="w-3 h-3 me-2" />
+              Web
+            </button>
+          </div>
+        )}
         <div>
           {image && (
-            <Image
-              alt="User_photo"
-              className="rounded-sm w-[15rem] h-[12rem] float-right mt-2 mx-2 mr-4 mb-4 border-2  "
-              src={computer}
-            />
+            <div className="float-right m-4">
+              <Image
+                alt="User_photo"
+                className="w-[15rem] h-[12rem]  rounded-lg"
+                src={computer}
+              />
+            </div>
           )}
-          <p className={` text-sm justify-start`}>
+          <p className={`my-3  text-sm justify-start`}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
             mollitia maiores laudantium earum quae blanditiis rem esse amet,
             optio, nesciunt autem, debitis inventore provident placeat minima
@@ -89,8 +82,8 @@ export const Card = ({ links, image, title, subTitle }: Props) => {
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
           </p>
 
-          <div className=" my-4 w-full ">
-            <div>
+          <div className=" py-4 w-full ">
+            <div className="flex flex-row flex-wrap">
               {ITEMS.map((e) => (
                 <Chip key={e} text={e} />
               ))}
@@ -98,6 +91,6 @@ export const Card = ({ links, image, title, subTitle }: Props) => {
           </div>
         </div>
       </section>
-    </CardAnimation>
+    </div>
   );
 };
