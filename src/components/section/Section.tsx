@@ -32,7 +32,7 @@ export const Section = ({ title, children }: Props) => {
       id={title}
       className={`${isInView ? "animate-fade-slide-in " : "invisible"} ${
         change ? "" : "fade-slide-out"
-      }  min-h-screen flex flex-col flex-nowrap justify-center items-start pt-20`}
+      }  min-h-screen flex flex-col flex-nowrap justify-center items-start xl:pt-20`}
     >
       <span className="text-3xl pb-5">{title}</span>
 
