@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import computer from "../../assets/computer.jpg";
 import { GoArrowUpRight, GoChevronRight } from "react-icons/go";
 import { Card } from "../card/Card";
 
 interface Props {}
 
 export const Portfolio = (props: Props) => {
+  const computer = "/computer.jpg";
   return (
     <>
       <p className={` text-lg justify-start`}>

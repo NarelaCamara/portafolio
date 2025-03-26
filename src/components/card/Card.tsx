@@ -1,7 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import computer from "../../assets/computer.jpg";
-import { GoArrowUpRight, GoChevronDown, GoChevronRight } from "react-icons/go";
 import Image from "next/image";
 import { Chip } from "../chip/Chip";
 import { FaGithub, FaGlobe } from "react-icons/fa6";
@@ -70,7 +68,9 @@ export const Card = ({ links, image, title, subTitle }: Props) => {
               <Image
                 alt="User_photo"
                 className="w-[15rem] h-[12rem]  rounded-lg"
-                src={computer}
+                src={image}
+                width={300}
+                height={300}
               />
             </div>
           )}

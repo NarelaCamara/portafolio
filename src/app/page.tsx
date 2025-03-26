@@ -2,7 +2,6 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import {
   About,
-  Animation,
   Contact,
   Experiencie,
   Nav,
@@ -55,7 +54,6 @@ export default function Home() {
             </div>
 
             <div className="px-12 xl:w-2/4    max-xl:w-full flex flex-col items-center relative xl:left-1/3 ">
-              <Animation className="right-0" />
               {ITEMS.map((e) => (
                 <Section {...e} key={e.title} />
               ))}
