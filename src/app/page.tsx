@@ -12,6 +12,7 @@ import {
 
 import { SessionContextProvider } from "@/helpers/session";
 import { description } from "@/utils/utils";
+import Image from "next/image";
 
 export const ITEMS = [
   {
@@ -48,7 +49,16 @@ export default function Home() {
       <body>
         <SessionContextProvider>
           <main className="min-h-screen px-6 max-w-[250rem] bg-slate-950">
-            <div className=" flex flex-col items-center xl:fixed z-10 xl:w-1/3 xl:top-64 max-xl:top-10 ">
+            <div className=" flex flex-col items-center xl:fixed z-10 xl:w-1/3 xl:top-16 max-xl:top-10 ">
+              <div className=" relative -left-5">
+                <Image
+                  alt="User_photo"
+                  className="rounded-full border-2 m-2 p-2 w-[20rem] h-[20rem]"
+                  src={"/computer.jpg"}
+                  width={300}
+                  height={300}
+                />
+              </div>
               <Nav />
               <Sidebar />
             </div>
