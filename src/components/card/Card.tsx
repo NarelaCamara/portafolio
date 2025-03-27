@@ -9,26 +9,23 @@ interface Props {
   subTitle?: string;
   image?: any;
   title: string;
+  description: string;
+  tecnologies: Array<string>;
 }
 
-export const Card = ({ links, image, title, subTitle }: Props) => {
+export const Card = ({
+  links,
+  image,
+  title,
+  subTitle,
+  description,
+  tecnologies,
+}: Props) => {
   const [showAll, setshowAll] = useState(false);
   const onClickShowMore = () => {
     setshowAll(!showAll);
   };
 
-  const ITEMS = [
-    "Rect js",
-    "Next js",
-    "Node js",
-    "React natite",
-    "Redux",
-    "Rect js",
-    "Next js",
-    "Node js",
-    "React natite",
-    "Redux",
-  ];
   //max-xl:bg-red-700 xl:bg-blue-600
   return (
     <div className="my-4">
@@ -74,22 +71,11 @@ export const Card = ({ links, image, title, subTitle }: Props) => {
               />
             </div>
           )}
-          <p className={`my-3  text-base justify-start`}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
-            mollitia maiores laudantium earum quae blanditiis rem esse amet,
-            optio, nesciunt autem, debitis inventore provident placeat minima
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
-            mollitia maiores laudantium earum quae blanditiis rem esse amet,
-            optio, nesciunt autem, debitis inventore provident placeat minima
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
-          </p>
+          <p className={`my-3  text-base justify-start`}>{description}</p>
 
           <div className=" py-4 w-full ">
             <div className="flex flex-row flex-wrap">
-              {ITEMS.map((e) => (
-                <Chip key={e} text={e} />
-              ))}
+              {tecnologies && tecnologies.map((e) => <Chip key={e} text={e} />)}
             </div>
           </div>
         </div>

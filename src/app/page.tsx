@@ -49,12 +49,12 @@ export default function Home() {
       <body>
         <SessionContextProvider>
           <main className="min-h-screen px-6 max-w-[250rem] bg-slate-950">
-            <div className=" flex flex-col items-center xl:fixed z-10 xl:w-1/3 xl:top-16 max-xl:top-10 ">
+            <div className=" flex flex-col items-center xl:fixed z-10 xl:w-1/3 xl:top-16 max-xl:top-10 bg-slate-950">
               <div className=" relative -left-5 ">
                 <Image
                   alt="User_photo"
                   className="rounded-full border-2 m-2 p-2 w-[20rem] h-[20rem] max-xl:mt-20"
-                  src={"/computer.jpg"}
+                  src={"/nare.jpeg"}
                   width={300}
                   height={300}
                 />

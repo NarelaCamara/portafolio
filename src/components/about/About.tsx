@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 interface Props {
@@ -6,7 +5,6 @@ interface Props {
 }
 //max-xl:bg-red-700
 export const About = ({ description }: Props) => {
-  const computer = "/computer.jpg";
   const description_split = description.split(/\*/);
   return (
     <>
