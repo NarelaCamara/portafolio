@@ -20,18 +20,6 @@ export const Portfolio = (props: Props) => {
     },
 
     {
-      title: "Challenge Aerolab",
-      description:
-        "Este es mi proyecto para Aerolab Frontend Developer Coding Challenge. La aplicación es una plataforma web interactiva que permite a los usuarios buscar y coleccionar videojuegos digitalmente, utilizando la API de IGDB para obtener información actualizada sobre videojuegos y el almacenamiento del navegador/dispositivo para guardar datos localmente. Además, incluye funcionalidades para explorar productos, ganar puntos y redimirlos.",
-      tecnologies: ["Next js", "Tailwind CSS"],
-      links: {
-        text: "https://github.com/NarelaCamara/frontend-developer-coding-challenge",
-        icon: "https://www.linkedin.com/in/narelacamara/",
-      },
-      image: "/computer.jpg",
-    },
-
-    {
       title:
         "Curso Domestica - Codificación creativa: crea piezas visuales con JavaScript",
       description:

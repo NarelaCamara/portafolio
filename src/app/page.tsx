@@ -13,26 +13,25 @@ import {
 import { SessionContextProvider } from "@/helpers/session";
 import Image from "next/image";
 
-export const ITEMS = [
-  {
-    children: <About />,
-    title: "Acerca de mi",
-  },
-  {
-    children: <Portfolio />,
-    title: "Portfolio",
-  },
-  {
-    children: <Experiencie />,
-    title: "Experiencia",
-  },
-  {
-    children: <Contact />,
-    title: "Contactame",
-  },
-];
-
 export default function Home() {
+  const ITEMS = [
+    {
+      children: <About />,
+      title: "Acerca de mi",
+    },
+    {
+      children: <Portfolio />,
+      title: "Portfolio",
+    },
+    {
+      children: <Experiencie />,
+      title: "Experiencia",
+    },
+    {
+      children: <Contact />,
+      title: "Contactame",
+    },
+  ];
   return (
     <html>
       <head>
@@ -59,7 +58,7 @@ export default function Home() {
                 />
               </div>
               <Nav />
-              <Sidebar />
+              <Sidebar items={ITEMS} />
             </div>
 
             <div className="px-12 xl:w-2/4    max-xl:w-full flex flex-col items-center relative xl:left-1/3 ">
