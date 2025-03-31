@@ -7,13 +7,13 @@ Encontrarás un poco sobre quién soy, mi experiencia y los conocimientos que he
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/NarelaCamara/frontend-developer-coding-challenge.git
+   git clone https://github.com/NarelaCamara/portafolio.git
    ```
 
 2. Navega a la carpeta del proyecto:
 
    ```bash
-   cd frontend-developer-coding-challenge
+   cd portafolio
    ```
 
 3. Instala las dependencias:
