@@ -8,32 +8,47 @@ interface Props {}
 export const Portfolio = (props: Props) => {
   const proyectos = [
     {
-      title: "Udemy Practicas",
+      title: "Challenge Aerolab",
       description:
-        "Este proyecto es una réplica de la página oficial de Abstract, desarrollada para practicar y mejorar habilidades en Next.js y Tailwind CSS. El objetivo es replicar el diseño, la disposición y algunos elementos interactivos de la página original.",
+        "Este es mi proyecto para Aerolab Frontend Developer Coding Challenge. La aplicación es una plataforma web interactiva que permite a los usuarios buscar y coleccionar videojuegos digitalmente, utilizando la API de IGDB para obtener información actualizada sobre videojuegos y el almacenamiento del navegador/dispositivo para guardar datos localmente. Además, incluye funcionalidades para explorar productos, ganar puntos y redimirlos.",
       tecnologies: ["Next js", "Tailwind CSS"],
+      links: {
+        text: "https://github.com/NarelaCamara/frontend-developer-coding-challenge",
+        icon: "https://www.linkedin.com/in/narelacamara/",
+      },
+      image: "/computer.jpg",
+    },
+
+    {
+      title: "Challenge Aerolab",
+      description:
+        "Este es mi proyecto para Aerolab Frontend Developer Coding Challenge. La aplicación es una plataforma web interactiva que permite a los usuarios buscar y coleccionar videojuegos digitalmente, utilizando la API de IGDB para obtener información actualizada sobre videojuegos y el almacenamiento del navegador/dispositivo para guardar datos localmente. Además, incluye funcionalidades para explorar productos, ganar puntos y redimirlos.",
+      tecnologies: ["Next js", "Tailwind CSS"],
+      links: {
+        text: "https://github.com/NarelaCamara/frontend-developer-coding-challenge",
+        icon: "https://www.linkedin.com/in/narelacamara/",
+      },
+      image: "/computer.jpg",
+    },
+
+    {
+      title:
+        "Curso Domestica - Codificación creativa: crea piezas visuales con JavaScript",
+      description:
+        "Aprendimos a diseñar composiciones artísticas únicas utilizando Canvas y la programación creativa.",
+      tecnologies: ["Canva"],
       links: {
         text: "https://www.linkedin.com/in/narelacamara/",
         icon: "https://www.linkedin.com/in/narelacamara/",
       },
       image: "/computer.jpg",
     },
+
     {
-      title: "Udemy Practicas",
+      title: "Curso - Legacy - Node: De cero a experto",
       description:
-        "Este proyecto es una réplica de la página oficial de Abstract, desarrollada para practicar y mejorar habilidades en Next.js y Tailwind CSS. El objetivo es replicar el diseño, la disposición y algunos elementos interactivos de la página original.",
-      tecnologies: ["Next js", "Tailwind CSS"],
-      links: {
-        text: "https://www.linkedin.com/in/narelacamara/",
-        icon: "https://www.linkedin.com/in/narelacamara/",
-      },
-      image: "/computer.jpg",
-    },
-    {
-      title: "Udemy Practicas",
-      description:
-        "Este proyecto es una réplica de la página oficial de Abstract, desarrollada para practicar y mejorar habilidades en Next.js y Tailwind CSS. El objetivo es replicar el diseño, la disposición y algunos elementos interactivos de la página original.",
-      tecnologies: ["Next js", "Tailwind CSS"],
+        "Mi objetivo con este curso, es aprender Node con ejercicios reales y aplicables en la vida real, aprender haciendo aplicaciones, incrementando la complejidad de las mismas poco a poco",
+      tecnologies: ["Nodemon", "Express", "Mongo"],
       links: {
         text: "https://www.linkedin.com/in/narelacamara/",
         icon: "https://www.linkedin.com/in/narelacamara/",

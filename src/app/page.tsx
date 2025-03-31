@@ -11,12 +11,11 @@ import {
 } from "@/components";
 
 import { SessionContextProvider } from "@/helpers/session";
-import { description } from "@/utils/utils";
 import Image from "next/image";
 
 export const ITEMS = [
   {
-    children: <About description={description} />,
+    children: <About />,
     title: "Acerca de mi",
   },
   {

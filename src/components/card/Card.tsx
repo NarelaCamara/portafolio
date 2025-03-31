@@ -38,6 +38,10 @@ export const Card = ({
         )}
         <div className=" my-4">
           <span className="text-2xl">{title}</span>{" "}
+        </div>
+
+        <div>
+          {" "}
           {links && (
             <div className="inline-flex rounded-md shadow-xs mx-2" role="group">
               <button
@@ -58,7 +62,6 @@ export const Card = ({
             </div>
           )}
         </div>
-
         <div>
           {image && (
             <div className="float-right m-4">
