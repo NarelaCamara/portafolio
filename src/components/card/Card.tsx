@@ -5,7 +5,7 @@ import { Chip } from "../chip/Chip";
 import { FaGithub, FaGlobe } from "react-icons/fa6";
 
 interface Props {
-  links?: Array<{ text: string; icon: string }>;
+  links?: { web: string; git: string };
   subTitle?: string;
   image?: any;
   title: string;
@@ -41,11 +41,13 @@ export const Card = ({
         </div>
 
         <div>
-          {" "}
           {links && (
             <div className="inline-flex rounded-md shadow-xs mx-2" role="group">
               <button
                 type="button"
+                onClick={() => {
+                  window.open(links.git, "_blank");
+                }}
                 className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
               >
                 <FaGithub size="3rem" className="w-3 h-3 me-2" />
@@ -54,6 +56,9 @@ export const Card = ({
 
               <button
                 type="button"
+                onClick={() => {
+                  window.open(links.web, "_blank");
+                }}
                 className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
               >
                 <FaGlobe size="2rem" className="w-3 h-3 me-2" />
