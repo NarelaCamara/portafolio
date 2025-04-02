@@ -36,8 +36,8 @@ export const Card = ({
         {subTitle && (
           <span className="text-lg font-bold relative top-4">{subTitle}</span>
         )}
-        <div className=" my-4">
-          <span className="text-2xl">{title}</span>{" "}
+        <div className=" my-4 font-bold ">
+          <span className="text-xl">{title}</span>{" "}
         </div>
 
         <div>

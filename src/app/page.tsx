@@ -2,7 +2,6 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import {
   About,
-  Contact,
   Experiencie,
   Nav,
   Portfolio,
@@ -26,10 +25,6 @@ export default function Home() {
     {
       children: <Experiencie />,
       title: "Experiencia",
-    },
-    {
-      children: <Contact />,
-      title: "Contactame",
     },
   ];
   return (

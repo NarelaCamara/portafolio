@@ -37,22 +37,15 @@ export const Experiencie = (props: Props) => {
 
   return (
     <>
-      <p className={` text-lg justify-start`}>
-        Mi experiencia profesional. Haz clic aquí para ver el <b>CV</b>{" "}
-        completo.
-      </p>
-
-      <div className="flex flex-col xl:m-16">
-        {experiencia.map((e) => (
-          <Card
-            key={e.title}
-            title={e.title}
-            subTitle={e.subTitle}
-            tecnologies={e.tecnologies}
-            description={e.description}
-          />
-        ))}
-      </div>
+      {experiencia.map((e) => (
+        <Card
+          key={e.title}
+          title={e.title}
+          subTitle={e.subTitle}
+          tecnologies={e.tecnologies}
+          description={e.description}
+        />
+      ))}
     </>
   );
 };

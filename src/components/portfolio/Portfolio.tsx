@@ -47,10 +47,7 @@ export const Portfolio = (props: Props) => {
 
   return (
     <>
-      <p className={` text-lg justify-start`}>
-        Proyectos propios que reflejan mis habilidades y conocimientos.
-      </p>
-      <div className="flex flex-row flex-wrap xl:w-2/2 xl:p-16">
+      <div>
         {proyectos.map((e) => (
           <Card
             key={e.title}
