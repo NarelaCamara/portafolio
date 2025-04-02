@@ -9,8 +9,7 @@ export const Portfolio = (props: Props) => {
   const proyectos = [
     {
       title: "Challenge Aerolab",
-      description:
-        "Este es mi proyecto para Aerolab Frontend Developer Coding Challenge. La aplicación es una plataforma web interactiva que permite a los usuarios buscar y coleccionar videojuegos digitalmente, utilizando la API de IGDB para obtener información actualizada sobre videojuegos y el almacenamiento del navegador/dispositivo para guardar datos localmente. Además, incluye funcionalidades para explorar productos, ganar puntos y redimirlos.",
+      description: "Aplicamos lo pedido para Challenge de Aerolab.",
       tecnologies: ["Next js", "Tailwind CSS"],
       links: {
         git: "https://github.com/NarelaCamara/frontend-developer-coding-challenge",
@@ -20,10 +19,9 @@ export const Portfolio = (props: Props) => {
     },
 
     {
-      title:
-        "Curso Domestica - Codificación creativa: crea piezas visuales con JavaScript",
+      title: "Codificación creativa: crea piezas visuales con JavaScript",
       description:
-        "Aprendimos a diseñar composiciones artísticas únicas utilizando Canvas y la programación creativa.",
+        "Aplicacion de los aprendido en el curso Codificación creativa: crea piezas visuales con JavaScript. Aprendimos a diseñar composiciones artísticas únicas utilizando Canvas.",
       tecnologies: ["Canva", "Vite"],
       links: {
         git: "https://github.com/NarelaCamara/drawjs.git",
@@ -33,10 +31,10 @@ export const Portfolio = (props: Props) => {
     },
 
     {
-      title: "Curso - Legacy - Node: De cero a experto",
+      title: "Legacy - Node: De cero a experto",
       description:
-        "Mi objetivo con este curso, es aprender Node con ejercicios reales y aplicables en la vida real, aprender haciendo aplicaciones, incrementando la complejidad de las mismas poco a poco",
-      tecnologies: ["Nodemon", "Express", "Mongo"],
+        "Aplicacion de lo aprendido del curso: Legacy - Node: De cero a experto por Fernando Herrera",
+      tecnologies: ["Nodemon", "Express", "Mongo", "JWT"],
       links: {
         git: "https://github.com/NarelaCamara/nodejs.git",
         web: "https://www.linkedin.com/in/narelacamara/",
@@ -47,18 +45,16 @@ export const Portfolio = (props: Props) => {
 
   return (
     <>
-      <div>
-        {proyectos.map((e) => (
-          <Card
-            key={e.title}
-            links={e.links}
-            image={e.image}
-            title={e.title}
-            description={e.description}
-            tecnologies={e.tecnologies}
-          />
-        ))}
-      </div>
+      {proyectos.map((e) => (
+        <Card
+          key={e.title}
+          links={e.links}
+          image={e.image}
+          title={e.title}
+          description={e.description}
+          tecnologies={e.tecnologies}
+        />
+      ))}
     </>
   );
 };

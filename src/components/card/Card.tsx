@@ -68,17 +68,6 @@ export const Card = ({
           )}
         </div>
         <div>
-          {image && (
-            <div className="float-right m-4">
-              <Image
-                alt="User_photo"
-                className="w-[15rem] h-[12rem]  rounded-lg"
-                src={image}
-                width={300}
-                height={300}
-              />
-            </div>
-          )}
           <p className={`my-3  text-base justify-start`}>{description}</p>
 
           <div className=" py-4 w-full ">

@@ -38,7 +38,7 @@ export const Section = ({ title, children }: Props) => {
         <span className="text-3xl pb-3 font-bold">{title}</span>
       )}
 
-      <div className="text-clip  ">{children}</div>
+      <div className="">{children}</div>
     </section>
   );
 };

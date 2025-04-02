@@ -7,7 +7,7 @@ export const Experiencie = (props: Props) => {
   const experiencia = [
     {
       title: "Senior Frontend developer, Accenture",
-      subTitle: " 2024 - Present",
+      subTitle: " 2024 - Actualidad",
       description:
         "Responsable del desarrollo de SPAs y mantenimiento de proyectos. Trabajo en estrecha colaboración con equipos multifuncionales, incluyendo DevOps, QAs, Back-end, UX y Product Owner. Mis tareas incluyen el mantenimiento, refactoring e implementación de nuevas funcionalidades, mientras realizo pruebas exhaustivas con Cypress para asegurar la estabilidad del producto.",
       tecnologies: [
