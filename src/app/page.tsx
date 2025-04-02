@@ -45,9 +45,9 @@ export default function Home() {
         ></meta>
       </head>
       <body>
-        <main className="min-h-screen px-6 max-w-[250rem] bg-slate-950 flex xl:flex-row max-xl:flex-col">
-          <div className=" flex flex-col items-center xl:fixed max-xl:top-10 bg-slate-950 xl:p-2">
-            <div className="relative ">
+        <main className="min-h-screen px-6 max-w-[250rem] bg-slate-950 flex xl:flex-row max-xl:flex-col align-middle ">
+          <div className=" xl:w-1/3 flex flex-col items-center xl:fixed max-xl:top-10 bg-slate-950 xl:p-2">
+            <div className="relative max-xl:top-28 ">
               <Image
                 alt="User_photo"
                 className="rounded-full border-2  m-2 p-2 "
@@ -60,7 +60,7 @@ export default function Home() {
             <Sidebar items={ITEMS} />
           </div>
 
-          <div className="w-2/4 left-1/3 relative">
+          <div className="xl:w-2/4 xl:left-1/3 relative">
             {ITEMS.map((e) => (
               <Section {...e} key={e.title} />
             ))}
