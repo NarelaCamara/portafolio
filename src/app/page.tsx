@@ -12,24 +12,29 @@ import {
 
 import { SessionContextProvider } from "@/helpers/session";
 import Image from "next/image";
+import { FaGlobe } from "react-icons/fa6";
 
 export default function Home() {
   const ITEMS = [
     {
       children: <About />,
       title: "Acerca de mi",
+      icon: <FaGlobe size="2rem" className="w-3 h-3 me-2" />,
     },
     {
       children: <Portfolio />,
       title: "Portfolio",
+      icon: <FaGlobe size="2rem" className="w-3 h-3 me-2" />,
     },
     {
       children: <Experiencie />,
       title: "Experiencia",
+      icon: <FaGlobe size="2rem" className="w-3 h-3 me-2" />,
     },
     {
       children: <Education />,
       title: "Educación",
+      icon: <FaGlobe size="2rem" className="w-3 h-3 me-2" />,
     },
   ];
   return (
