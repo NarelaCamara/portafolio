@@ -12,24 +12,30 @@ import {
 
 import { SessionContextProvider } from "@/helpers/session";
 import Image from "next/image";
+import { FaContao } from "react-icons/fa6";
+import { RiContactsLine } from "react-icons/ri";
 
 export default function Home() {
   const ITEMS = [
     {
       children: <About />,
       title: "Acerca de mi",
+      icon: <RiContactsLine size={200} />,
     },
     {
       children: <Portfolio />,
       title: "Portfolio",
+      icon: <RiContactsLine size={200} />,
     },
     {
       children: <Experiencie />,
       title: "Experiencia",
+      icon: <RiContactsLine size={200} />,
     },
     {
       children: <Education />,
       title: "Educación",
+      icon: <RiContactsLine size={200} />,
     },
   ];
   return (
