@@ -34,9 +34,11 @@ export const Section = ({ title, children }: Props) => {
         change ? "" : "fade-slide-out"
       }  min-h-screen flex flex-col flex-nowrap justify-center items-start xl:pt-20`}
     >
-      {"Acerca de mi" !== title && (
-        <span className="text-3xl pb-3 font-bold">{title}</span>
-      )}
+      {
+        <span className="text-3xl p-3 font-bold bg-slate-950 sticky top-0 w-full">
+          {title}
+        </span>
+      }
 
       <div className="">{children}</div>
     </section>

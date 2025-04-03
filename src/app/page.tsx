@@ -19,22 +19,18 @@ export default function Home() {
     {
       children: <About />,
       title: "Acerca de mi",
-      icon: <FaGlobe size="2rem" className="w-3 h-3 me-2" />,
     },
     {
       children: <Portfolio />,
       title: "Portfolio",
-      icon: <FaGlobe size="2rem" className="w-3 h-3 me-2" />,
     },
     {
       children: <Experiencie />,
       title: "Experiencia",
-      icon: <FaGlobe size="2rem" className="w-3 h-3 me-2" />,
     },
     {
       children: <Education />,
       title: "Educación",
-      icon: <FaGlobe size="2rem" className="w-3 h-3 me-2" />,
     },
   ];
   return (
