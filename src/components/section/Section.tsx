@@ -9,34 +9,9 @@ interface Props {
 }
 
 export const Section = ({ title, children }: Props) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref);
-  const { updateSectionActive, sectionActive } = useSession();
-  const [change, setChange] = useState(isInView);
-
-  useEffect(() => {
-    if (!!isInView) {
-      updateSectionActive(title);
-      setChange(true);
-    } else if (change) {
-      setTimeout(() => {
-        setChange(false);
-      }, 3000);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isInView]);
-
   return (
-    <section
-      ref={ref}
-      id={title}
-      className={`${isInView ? "animate-fade-slide-in " : "invisible"} ${
-        change ? "" : "fade-slide-out"
-      }  min-h-screen flex flex-col flex-nowrap justify-center items-start xl:pt-20`}
-    >
-      {"Acerca de mi" !== title && (
-        <span className="text-3xl pb-3 font-bold">{title}</span>
-      )}
+    <section id={title} className={`w-full bg-slate-950 sticky top-0`}>
+      {<p className="text-3xl p-3 font-bold">{title}</p>}
 
       <div className="">{children}</div>
     </section>
