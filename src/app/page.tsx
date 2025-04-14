@@ -8,6 +8,7 @@ import {
   Portfolio,
   Section,
   Sidebar,
+  SidebarItem,
 } from "@/components";
 
 import { SessionContextProvider } from "@/helpers/session";
@@ -46,22 +47,9 @@ export default function Home() {
         ></meta>
       </head>
       <body>
-        <main className="    bg-slate-950 flex xl:flex-row max-xl:flex-col align-middle ">
-          <div className=" xl:w-1/3 flex flex-col items-center  max-xl:top-10 bg-slate-950 xl:p-2">
-            <div className=" fixed bg-blue-600 ">
-              <Image
-                alt="User_photo"
-                className="rounded-full border-2 m-2 p-2 "
-                src={"/nare.jpeg"}
-                width={300}
-                height={300}
-              />
-              <Nav />
-              <Sidebar items={ITEMS} />
-            </div>
-          </div>
-
-          <div className="xl:w-2/4 xl:left-1/3">
+        <main className="bg-slate-950 flex lg:flex-row flex-col align-middle ">
+          <Sidebar items={ITEMS} />
+          <div className="lg:w-2/4 lg:left-1/3">
             {ITEMS.map((e) => (
               <Section {...e} key={e.title} />
             ))}

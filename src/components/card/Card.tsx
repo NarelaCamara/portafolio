@@ -26,7 +26,6 @@ export const Card = ({
     setshowAll(!showAll);
   };
 
-  //max-xl:bg-red-700 xl:bg-blue-600
   return (
     <div className="my-4">
       <section

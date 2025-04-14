@@ -4,7 +4,7 @@ import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa6";
 interface Props {
   description: string;
 }
-//max-xl:bg-red-700
+
 export const About = () => {
   const description_split = [
     "Soy Developer Frontend, especializada en React y Next.",
@@ -14,7 +14,7 @@ export const About = () => {
   ];
   return (
     <>
-      <div className="flex flex-col max-md:flex-col   relative w-full custom: ">
+      <div className="flex flex-col relative w-full">
         <b className="text-3xl pb-3">Hola! Mi nombre es Narela</b>
         <div className="flex flex-col justify-start w-full ">
           {description_split.map((e: string) => {
@@ -25,43 +25,51 @@ export const About = () => {
             );
           })}
         </div>
-        <div>
-          <a
-            href="/cv-NarelaRCamara.pdf"
-            download="cv-NarelaCamara.pdf"
-            rel="noopener noreferrer"
-          >
+        <div className="flex flex-col lg:flex-row align-middle">
+          <div className="p-2">
+            <a
+              href="/cv-NarelaRCamara.pdf"
+              download="cv-NarelaCamara.pdf"
+              rel="noopener noreferrer"
+            >
+              <button
+                type="button"
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                <FaDownload size="1.5rem" className="w-3.5 h-3.5 me-2" />
+                Descarga CV
+              </button>
+            </a>
+          </div>
+
+          <div className="p-2">
             <button
+              onClick={() => {
+                window.open(
+                  "https://www.linkedin.com/in/narelacamara/",
+                  "_blank"
+                );
+              }}
               type="button"
               className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
-              <FaDownload size="1.5rem" className="w-3.5 h-3.5 me-2" />
-              Descarga CV
+              <FaLinkedin size="1.5rem" className="w-3.5 h-3.5 me-2" />
+              Linkedin
             </button>
-          </a>
-          <button
-            onClick={() => {
-              window.open(
-                "https://www.linkedin.com/in/narelacamara/",
-                "_blank"
-              );
-            }}
-            type="button"
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            <FaLinkedin size="1.5rem" className="w-3.5 h-3.5 me-2" />
-            Linkedin
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              window.open("https://github.com/NarelaCamara", "_blank");
-            }}
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            <FaGithub size="1.5rem" className="w-3.5 h-3.5 me-2" />
-            Git hub
-          </button>
+          </div>
+
+          <div className="p-2">
+            <button
+              type="button"
+              onClick={() => {
+                window.open("https://github.com/NarelaCamara", "_blank");
+              }}
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              <FaGithub size="1.5rem" className="w-3.5 h-3.5 me-2" />
+              Git hub
+            </button>
+          </div>
         </div>
       </div>
     </>

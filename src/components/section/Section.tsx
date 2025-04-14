@@ -1,7 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import useInView from "@/helpers/useInView";
-import { useSession } from "@/helpers/session";
+import React from "react";
 
 interface Props {
   children: any;
@@ -10,10 +8,10 @@ interface Props {
 
 export const Section = ({ title, children }: Props) => {
   return (
-    <section id={title} className={`w-full bg-slate-950 sticky top-0`}>
+    <section id={title} className={`bg-slate-950 w-full sticky`}>
       {<p className="text-3xl p-3 font-bold">{title}</p>}
 
-      <div className="">{children}</div>
+      <div className="p-2">{children}</div>
     </section>
   );
 };
