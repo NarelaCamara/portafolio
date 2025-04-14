@@ -9,8 +9,8 @@ interface Props {
 
 export const Sidebar = ({ items }: Props) => {
   return (
-    <div className=" lg:w-1/3 flex flex-col items-center relative max-lg:top-10 bg-slate-950 lg:p-2">
-      <div className=" fixed bg-blue-600 ">
+    <div className=" lg:w-1/3 flex flex-col items-center relative lg:top-10 bg-slate-950 lg:p-2">
+      <div className="fixed">
         <Image
           alt="User_photo"
           className="rounded-full border-2 m-2 p-2 "
@@ -19,8 +19,8 @@ export const Sidebar = ({ items }: Props) => {
           height={300}
         />
         <Nav />
-        <div className="bg-slate-950 flex max-lg:flex-row lg:flex-col max-lg:bg-origin-content  max-lg:fixed text-white  w-full lg:max-w-[15rem] p-4 max-lg:justify-center  max-lg:z-10">
-          <nav className="flex  max-lg:flex-row  lg:flex-col gap-1 min-w-[240px]  text-lg font-normal text-white">
+        <div className="bg-slate-950 flex flex-col lg:flex-row  lg:bg-origin-content  lg:fixed text-white  w-full lg:w-[15rem] p-4 lg:justify-center  lg:z-10">
+          <nav className="flex flex-row xl:flex-col gap-1 min-w-[240px]  text-lg font-normal text-white">
             {items.map((e) => (
               <SidebarItem key={e.title} title={e.title} />
             ))}
