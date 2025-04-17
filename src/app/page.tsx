@@ -4,16 +4,10 @@ import {
   About,
   Education,
   Experiencie,
-  Nav,
   Portfolio,
   Section,
   Sidebar,
-  SidebarItem,
 } from "@/components";
-
-import { SessionContextProvider } from "@/helpers/session";
-import Image from "next/image";
-import { FaGlobe } from "react-icons/fa6";
 
 export default function Home() {
   const ITEMS = [
@@ -46,10 +40,10 @@ export default function Home() {
           content="width=device-width, initial-scale=1.0"
         ></meta>
       </head>
-      <body>
+      <body className="bg-slate-950">
         <main className="bg-slate-950 flex lg:flex-row flex-col align-middle ">
           <Sidebar items={ITEMS} />
-          <div className="lg:w-2/4 lg:left-1/3">
+          <div className="bg-slate-950 lg:w-2/4 lg:left-1/3">
             {ITEMS.map((e) => (
               <Section {...e} key={e.title} />
             ))}
