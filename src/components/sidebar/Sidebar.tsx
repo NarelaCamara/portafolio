@@ -19,8 +19,8 @@ export const Sidebar = ({ items }: Props) => {
           height={300}
         />
         <Nav />
-        <div className="hidden text-white w-full p-4 bg-slate-950 flex-col lg:flex lg:bg-origin-content lg:fixed lg:justify-center lg:z-10">
-          <nav className="flex flex-col justify-center gap-1 min-w-[240px]  text-lg font-normal text-white">
+        <div className="hidden  text-white w-full p-4 bg-slate-950 flex-col lg:flex lg:bg-origin-content lg:fixed lg:justify-center lg:z-10">
+          <nav className=" relative -right-20 flex flex-col justify-center gap-1 min-w-[240px]  text-lg font-normal text-white">
             {items.map((e) => (
               <SidebarItem key={e.title} title={e.title} />
             ))}

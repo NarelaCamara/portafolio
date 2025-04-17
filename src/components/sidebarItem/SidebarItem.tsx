@@ -25,7 +25,7 @@ export const SidebarItem = ({ title }: Props) => {
             title === sectionActive
               ? "font-bold scale-110 translate-x-[-10px]"
               : " font-normal"
-          }   items-stretch w-full p-3 rounded-lg text-start leading-tight  inline-block  text-sm transition-all duration-[0.5s] transform-gpu hover:font-bold hover:scale-110 hover:translate-x-[-10px]`}
+          }   items-stretch w-full p-3 rounded-lg text-start leading-tight  inline-block  text-sm transition-all duration-[0.5s] transform-gpu hover:font-bold hover:scale-100 hover:translate-x-[-10px]`}
         >
           {title}
         </span>
