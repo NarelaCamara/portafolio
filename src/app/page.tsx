@@ -35,6 +35,12 @@ export default function Home() {
           src="https://example.com/fontawesome/vVERSION/js/all.js"
           data-auto-a11y="true"
         ></script>
+        <link
+          rel="icon"
+          href="/nrc-logo.svg"
+          type="image/svg+xml"
+          sizes="32x32"
+        />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0"
