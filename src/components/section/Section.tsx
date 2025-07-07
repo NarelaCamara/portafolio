@@ -9,9 +9,13 @@ interface Props {
 export const Section = ({ title, children }: Props) => {
   return (
     <section id={title} className={`lg:relative lg:h-screen mt-20`}>
-      {<p className="text-3xl p-3 font-bold">{title}</p>}
+      {
+        <p className=" p-3 font-bold font-fraunces text-2xl text-center">
+          {title}
+        </p>
+      }
 
-      <div className="p-2">{children}</div>
+      <div className="p-2 ">{children}</div>
     </section>
   );
 };

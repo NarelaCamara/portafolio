@@ -1,18 +1,27 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Fraunces } from "next/font/google";
 import "./globals.css";
-
-const montserrat = Montserrat({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  fallback: ["Arial", "sans-serif"],
-});
 
 export const metadata: Metadata = {
   title: "Narela  Camara",
-  description: "Portafolio",
+  description: "About me",
 };
+
+// Configura Fraunces
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-fraunces",
+  display: "swap",
+});
+
+// Configura Montserrat
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -21,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body className={montserrat.className}>{children}</body>
+      <body className={`${fraunces.variable} ${montserrat.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        fraunces: ["var(--font-fraunces)", "sans-serif"],
+        montserrat: ["var(--font-montserrat)", "sans-serif"],
+      },
       animation: {
         "fade-slide-in": "myAnim1 1s ease-in-out",
         "fade-slide-out": "myAnim2 1s ease-in-out",

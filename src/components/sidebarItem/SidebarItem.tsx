@@ -13,11 +13,11 @@ export const SidebarItem = ({ title }: Props) => {
 
   const { updateSectionActive, sectionActive } = useSession();
   return (
-    <div className="relative fade-slide-out ">
+    <div className="relative fade-slide-out flex flex-row justify-center">
       <Link
         onClick={() => updateSectionActive(title)}
         href={`#${title === "Acerca de mi" ? "" : title}`}
-        className=""
+        className="text-center"
       >
         <span
           ref={ref}

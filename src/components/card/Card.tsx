@@ -29,51 +29,52 @@ export const Card = ({
   return (
     <div className="my-4 bg-slate-950">
       <section
-        className="m-2 flex flex-col justify-start"
+        className="m-2 flex flex-col justify-center align-middle"
         onClick={(e) => onClickShowMore()}
       >
         {subTitle && (
-          <span className="text-lg font-bold relative top-4">{subTitle}</span>
+          <span className="text-lg font-bold relative top-4 text-center">
+            {subTitle}
+          </span>
         )}
-        <div className=" my-4 font-bold ">
-          <span className="text-xl">{title}</span>{" "}
-        </div>
+        <span className="my-4 font-bold text-xl text-center flex flex-row justify-center align-middle">
+          {title}
+        </span>
+        {links && (
+          <div
+            className="rounded-md shadow-xs mx-2 flex flex-row justify-center align-middle"
+            role="group"
+          >
+            <button
+              type="button"
+              onClick={() => {
+                window.open(links.git, "_blank");
+              }}
+              className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+            >
+              <FaGithub size="3rem" className="w-3 h-3 me-2" />
+              Git hub
+            </button>
 
-        <div>
-          {links && (
-            <div className="inline-flex rounded-md shadow-xs mx-2" role="group">
-              <button
-                type="button"
-                onClick={() => {
-                  window.open(links.git, "_blank");
-                }}
-                className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
-              >
-                <FaGithub size="3rem" className="w-3 h-3 me-2" />
-                Git hub
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  window.open(links.web, "_blank");
-                }}
-                className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
-              >
-                <FaGlobe size="2rem" className="w-3 h-3 me-2" />
-                Web
-              </button>
-            </div>
-          )}
-        </div>
-        <div>
-          <p className={`my-3  text-base justify-start`}>{description}</p>
-
-          <div className=" py-4 w-full ">
-            <div className="flex flex-row flex-wrap">
-              {tecnologies && tecnologies.map((e) => <Chip key={e} text={e} />)}
-            </div>
+            <button
+              type="button"
+              onClick={() => {
+                window.open(links.web, "_blank");
+              }}
+              className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+            >
+              <FaGlobe size="2rem" className="w-3 h-3 me-2" />
+              Web
+            </button>
           </div>
+        )}
+        <p
+          className={`my-3 text-[#6C7289] text-sm text-center justify-start font-monserrat`}
+        >
+          {description}
+        </p>
+        <div className="flex flex-row flex-wrap  justify-center align-middle font-monserrat py-4 ">
+          {tecnologies && tecnologies.map((e) => <Chip key={e} text={e} />)}
         </div>
       </section>
     </div>
