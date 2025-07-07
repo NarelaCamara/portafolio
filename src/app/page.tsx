@@ -40,10 +40,10 @@ export default function Home() {
           content="width=device-width, initial-scale=1.0"
         ></meta>
       </head>
-      <body className="bg-slate-950 m-8 border-solid  border-red-100 border-1">
-        <main className="bg-slate-950">
+      <body className="bg-slate-900 m-8 ">
+        <main className="bg-slate-900 m-8 ">
           <Sidebar items={ITEMS} />
-          <div className="bg-slate-950">
+          <div className="bg-slate-900">
             {ITEMS.map((e) => (
               <Section {...e} key={e.title} />
             ))}

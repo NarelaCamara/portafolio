@@ -30,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body className={`${fraunces.variable} ${montserrat.variable}`}>
+      <body
+        className={`${fraunces.variable} ${montserrat.variable} bg-slate-900 text-white  min-w-[20rem]`}
+      >
         {children}
       </body>
     </html>

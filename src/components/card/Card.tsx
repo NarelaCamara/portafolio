@@ -27,7 +27,7 @@ export const Card = ({
   };
 
   return (
-    <div className="my-4 bg-slate-950">
+    <div className="my-4 bg-slate-900">
       <section
         className="m-2 flex flex-col justify-center align-middle"
         onClick={(e) => onClickShowMore()}
