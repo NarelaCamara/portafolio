@@ -21,7 +21,9 @@ export const SidebarItem = ({ title }: Props) => {
       >
         <span
           ref={ref}
-          className={` ${!isinview ? "animate-focus-in-contract" : ""}  ${
+          className={` text-lg text-[#6C7289]   font-monserrat ${
+            !isinview ? "animate-focus-in-contract" : ""
+          }  ${
             title === sectionActive
               ? "font-bold scale-110 translate-x-[-10px]"
               : " font-normal"

@@ -25,7 +25,7 @@ export const About = () => {
             );
           })}
         </div>
-        <div className="flex flex-col lg:flex-row align-middle">
+        <div className="flex flex-col lg:flex-row align-middle justify-center">
           <div className="p-2">
             <a
               href="/cv-NarelaRCamara.pdf"

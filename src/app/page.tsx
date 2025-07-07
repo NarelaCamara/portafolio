@@ -40,13 +40,20 @@ export default function Home() {
           content="width=device-width, initial-scale=1.0"
         ></meta>
       </head>
-      <body className="bg-slate-900 m-8 ">
-        <main className="bg-slate-900 m-8 ">
-          <Sidebar items={ITEMS} />
-          <div className="bg-slate-900">
-            {ITEMS.map((e) => (
-              <Section {...e} key={e.title} />
-            ))}
+      <body className="bg-slate-900 m-16">
+        <main>
+          <div className="lg:grid lg:grid-cols-3 lg:grid-rows-2">
+            {/* Sidebar sticky */}
+            <div className="lg:row-span-2 lg:sticky lg:top-8 lg:self-start">
+              <Sidebar items={ITEMS} />
+            </div>
+
+            {/* Contenido scrollable */}
+            <div className="lg:col-span-2 lg:row-span-2 m-8 lg:space-y-12">
+              {ITEMS.map((e) => (
+                <Section {...e} key={e.title} />
+              ))}
+            </div>
           </div>
         </main>
       </body>
