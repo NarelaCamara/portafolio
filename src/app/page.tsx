@@ -43,13 +43,11 @@ export default function Home() {
       <body className="bg-slate-900 m-16">
         <main>
           <div className="lg:grid lg:grid-cols-3 lg:grid-rows-2">
-            {/* Sidebar sticky */}
             <div className="lg:row-span-2 lg:sticky lg:top-8 lg:self-start">
               <Sidebar items={ITEMS} />
             </div>
 
-            {/* Contenido scrollable */}
-            <div className="lg:col-span-2 lg:row-span-2 m-8 lg:space-y-12">
+            <div className="lg:col-span-2 lg:row-span-2 m-8 lg:space-y-12 max-w-[1000px]">
               {ITEMS.map((e) => (
                 <Section {...e} key={e.title} />
               ))}

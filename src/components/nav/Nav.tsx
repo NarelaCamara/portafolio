@@ -24,17 +24,17 @@ export const Nav = (props: Props) => {
         height={150}
       />
       <h1
-        className={`text-center text-4xl font-extrabold mb-4 font-fraunces my-2`}
+        className={`text-center lg:text-start text-4xl font-extrabold mb-4 font-fraunces my-2`}
       >
         Narela Camara
       </h1>
       <h1
-        className={`text-center text-xl mb-4 font-montserrat tracking-[0.5rem]`}
+        className={`text-center lg:text-start text-xl mb-4 font-montserrat tracking-[0.5rem]`}
       >
         Frontend developer
       </h1>
       <h1
-        className={`  mb-4 font-montserrat text-center text-[#6C7289]  text-xs tracking-[0.5rem]`}
+        className={`  mb-4 font-montserrat text-center lg:text-start text-[#6C7289]  text-xs tracking-[0.5rem]`}
       >
         Next | React | Node
       </h1>

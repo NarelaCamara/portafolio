@@ -33,16 +33,16 @@ export const Card = ({
         onClick={(e) => onClickShowMore()}
       >
         {subTitle && (
-          <span className="text-lg font-bold relative top-4 text-center">
+          <span className="text-lg font-bold relative top-4 text-center lg:text-start">
             {subTitle}
           </span>
         )}
-        <span className="my-4 font-bold text-xl text-center flex flex-row justify-center align-middle">
+        <span className="my-4 font-bold text-xl text-center lg:text-start flex flex-row justify-center lg:justify-start align-middle">
           {title}
         </span>
         {links && (
           <div
-            className="rounded-md shadow-xs mx-2 flex flex-row justify-center align-middle"
+            className="rounded-md shadow-xs mx-2 flex flex-row justify-center lg:justify-start align-middle"
             role="group"
           >
             <button
@@ -69,11 +69,11 @@ export const Card = ({
           </div>
         )}
         <p
-          className={`my-3 text-[#6C7289] text-sm text-center justify-start font-monserrat`}
+          className={`my-3 text-[#6C7289] text-sm text-center lg:text-start justify-start font-monserrat`}
         >
           {description}
         </p>
-        <div className="flex flex-row flex-wrap  justify-center align-middle font-monserrat py-4 ">
+        <div className="flex flex-row flex-wrap  justify-center lg:justify-start align-middle font-monserrat py-4 ">
           {tecnologies && tecnologies.map((e) => <Chip key={e} text={e} />)}
         </div>
       </section>

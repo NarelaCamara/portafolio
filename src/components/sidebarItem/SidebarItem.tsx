@@ -17,7 +17,7 @@ export const SidebarItem = ({ title }: Props) => {
       <Link
         onClick={() => updateSectionActive(title)}
         href={`#${title === "Acerca de mi" ? "" : title}`}
-        className="text-center"
+        className="text-center lg:text-start"
       >
         <span
           ref={ref}

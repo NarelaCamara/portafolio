@@ -14,7 +14,7 @@ export const About = () => {
   ];
   return (
     <>
-      <div className="flex flex-col relative w-full text-center">
+      <div className="flex flex-col relative w-full text-center lg:text-start">
         <b className="text-3xl pb-3 font-fraunces">Hola! Mi nombre es Narela</b>
         <div className="flex flex-col justify-start w-full  text-[#6C7289] text-sm  ">
           {description_split.map((e: string) => {
@@ -34,7 +34,7 @@ export const About = () => {
             >
               <button
                 type="button"
-                className="font-monserrat text-white bg-gray-700 hover:focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2  dark:hover:bg-gray-700 dark:focus:ring-blue-800"
+                className="font-monserrat text-white bg-gray-700 hover:focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:text-start inline-flex items-center me-2  dark:hover:bg-gray-700 dark:focus:ring-blue-800"
               >
                 <FaDownload
                   size="1.5rem"
@@ -54,7 +54,7 @@ export const About = () => {
                 );
               }}
               type="button"
-              className="font-monserrat text-white bg-gray-700 hover:focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2  dark:hover:bg-gray-700 dark:focus:ring-blue-800"
+              className="font-monserrat text-white bg-gray-700 hover:focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:text-start inline-flex items-center me-2  dark:hover:bg-gray-700 dark:focus:ring-blue-800"
             >
               <FaLinkedin size="1.5rem" className="w-3.5 h-3.5 me-2" />
               Linkedin
@@ -67,7 +67,7 @@ export const About = () => {
               onClick={() => {
                 window.open("https://github.com/NarelaCamara", "_blank");
               }}
-              className="font-monserrat text-white bg-gray-700 hover:focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2  dark:hover:bg-gray-700 dark:focus:ring-blue-800"
+              className="font-monserrat text-white bg-gray-700 hover:focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:text-start inline-flex items-center me-2  dark:hover:bg-gray-700 dark:focus:ring-blue-800"
             >
               <FaGithub size="1.5rem" className="w-3.5 h-3.5 me-2" />
               Git hub
