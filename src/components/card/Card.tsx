@@ -33,7 +33,7 @@ export const Card = ({
         onClick={(e) => onClickShowMore()}
       >
         {subTitle && (
-          <span className="text-lg font-bold relative top-4 text-center lg:text-start">
+          <span className="text-lg font-bold top-4 text-center lg:text-start">
             {subTitle}
           </span>
         )}

@@ -14,7 +14,7 @@ export const About = () => {
   ];
   return (
     <>
-      <div className="flex flex-col relative w-full text-center lg:text-start">
+      <div className="flex flex-col w-full text-center lg:text-start">
         <b className="text-3xl pb-3 font-fraunces">Hola! Mi nombre es Narela</b>
         <div className="flex flex-col justify-start w-full  text-[#6C7289] text-sm  ">
           {description_split.map((e: string) => {

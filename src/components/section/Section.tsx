@@ -8,13 +8,13 @@ interface Props {
 
 export const Section = ({ title, children }: Props) => {
   return (
-    <section id={title} className={`lg:h-screen lg:pt-32 md:pt-10 sm:pt-12`}>
+    <section id={title} className={`md:h-screen my-16 max-w-[750px]`}>
       {
-        <p className=" p-3 font-bold font-fraunces text-2xl lg:text-4xl text-center lg:text-start">
+        <p className="my-4 font-bold font-fraunces text-2xl text-center lg:text-start lg:text-4xl">
           {title}
         </p>
       }
-      {children}
+      <div className="my-2">{children}</div>
     </section>
   );
 };
