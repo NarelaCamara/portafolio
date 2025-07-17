@@ -1,20 +1,14 @@
 "use client";
-import useInView from "@/helpers/useInView";
 import Image from "next/image";
-import React, { useRef } from "react";
+import React from "react";
 
 interface Props {}
 
 export const Nav = (props: Props) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isinview = useInView(ref);
-
   return (
     <div
-      ref={ref}
-      className={` ${
-        !isinview ? "animate-focus-in-contract" : ""
-      } flex flex-col items-center justify-center `}
+      className={` 
+        flex flex-col items-center justify-center `}
     >
       <Image
         alt="User_photo"

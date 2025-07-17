@@ -8,6 +8,7 @@ import {
   Section,
   Sidebar,
 } from "@/components";
+import LandingPage from "@/ui/section/section";
 
 export default function Home() {
   const ITEMS = [
@@ -50,7 +51,9 @@ export default function Home() {
         <main>
           <div className="lg:grid lg:grid-cols-3 lg:grid-rows-2">
             <div className="lg:row-span-2 lg:sticky lg:top-8 lg:self-start">
-              <Sidebar items={ITEMS} />
+              <LandingPage>
+                <Sidebar items={ITEMS} />
+              </LandingPage>
             </div>
 
             <div className="lg:col-span-2 lg:row-span-2 m-8 lg:space-y-12 max-w-[1000px]">
