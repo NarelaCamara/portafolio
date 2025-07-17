@@ -49,7 +49,7 @@ export default function Home() {
       </head>
       <body className="bg-slate-900 m-16">
         <main>
-          <div className="lg:grid lg:grid-cols-3 lg:grid-rows-2">
+          <div className="lg:grid lg:grid-cols-3 lg:grid-rows-2 min-w-[300px]">
             <div className="lg:row-span-2 lg:sticky lg:top-8 lg:self-start">
               <LandingPage>
                 <Sidebar items={ITEMS} />
