@@ -1,9 +1,6 @@
-import React from "react";
 import { Card } from "../card/Card";
 
-interface Props {}
-
-export const Education = (props: Props) => {
+export const Education = () => {
   const experiencia = [
     {
       title: "Universidad Nacional de Quilmes",

@@ -1,13 +1,11 @@
 "use client";
-import React, { useState } from "react";
-import Image from "next/image";
+import { useState } from "react";
 import { Chip } from "../chip/Chip";
 import { FaGithub, FaGlobe } from "react-icons/fa6";
 
 interface Props {
   links?: { web: string; git: string };
   subTitle?: string;
-  image?: any;
   title: string;
   description: string;
   tecnologies: Array<string>;
@@ -15,7 +13,7 @@ interface Props {
 
 export const Card = ({
   links,
-  image,
+
   title,
   subTitle,
   description,
@@ -30,14 +28,14 @@ export const Card = ({
     <div className="my-4 bg-slate-900">
       <section
         className="m-2 flex flex-col justify-center align-middle"
-        onClick={(e) => onClickShowMore()}
+        onClick={() => onClickShowMore()}
       >
         {subTitle && (
-          <span className="text-lg font-bold top-4 text-center lg:text-start">
+          <span className=" text-[#FFFF] text-lg font-bold top-4 text-center lg:text-start">
             {subTitle}
           </span>
         )}
-        <span className="my-4 font-bold text-xl text-center lg:text-start flex flex-row justify-center lg:justify-start align-middle">
+        <span className="text-[#FFFF] my-4 font-bold text-xl text-center lg:text-start flex flex-row justify-center lg:justify-start align-middle font-[Montserrat]">
           {title}
         </span>
         {links && (
@@ -69,11 +67,11 @@ export const Card = ({
           </div>
         )}
         <p
-          className={`my-3 text-[#6C7289] text-sm text-center lg:text-start justify-start font-monserrat`}
+          className={`my-3 text-[#6C7289] text-sm text-center lg:text-start justify-start font-[Montserrat]`}
         >
           {description}
         </p>
-        <div className="flex flex-row flex-wrap  justify-center lg:justify-start align-middle font-monserrat py-4 ">
+        <div className="flex flex-row flex-wrap  justify-center lg:justify-start align-middle font-[Montserrat] py-4 ">
           {tecnologies && tecnologies.map((e) => <Chip key={e} text={e} />)}
         </div>
       </section>

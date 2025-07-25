@@ -1,4 +1,4 @@
-import React from "react";
+
 import { SidebarItem } from "../sidebarItem/SidebarItem";
 import { Nav } from "../nav/Nav";
 
@@ -8,7 +8,7 @@ interface Props {
 
 export const Sidebar = ({ items }: Props) => {
   return (
-    <div className="p-8">
+    <div className="m-4">
       <Nav />
       <div className="hidden lg:block">
         <nav className="p-8 flex flex-col">

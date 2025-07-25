@@ -1,34 +1,28 @@
-"use client";
-import Image from "next/image";
-import React from "react";
+import nare from "../../assets/nare.jpeg";
 
-interface Props {}
-
-export const Nav = (props: Props) => {
+export const Nav = () => {
   return (
     <div
       className={` 
-        flex flex-col items-center justify-center `}
+        flex flex-col items-center justify-center min-w-[350px]`}
     >
-      <Image
+      <img
         alt="User_photo"
-        className="rounded-full border-2 w-64 border-[#6C7289] "
-        src={"/nare.jpeg"}
-        width={150}
-        height={150}
+        className="rounded-full border-2  border-[#6C7289] h-[256px] w-[256px]"
+        src={nare}
       />
       <h1
-        className={`text-center lg:text-start text-4xl font-extrabold mb-4 font-fraunces my-2`}
+        className={`text-[#FFFF] text-center lg:text-start text-4xl font-extrabold mb-4 font-[Fraunces] my-2`}
       >
         Narela Camara
       </h1>
       <h1
-        className={`text-center lg:text-start text-xl mb-4 font-montserrat tracking-[0.5rem]`}
+        className={`text-[#FFFF] text-center lg:text-start text-xl   mb-4 font-[Montserrat] tracking-[0.5rem]`}
       >
         Frontend developer
       </h1>
       <h1
-        className={`  mb-4 font-montserrat text-center lg:text-start text-[#6C7289]  text-xs tracking-[0.5rem]`}
+        className={`  mb-4 font-[Montserrat] text-[#6C7289] text-center lg:text-start    text-xs tracking-[0.5rem]`}
       >
         Next | React | Node
       </h1>

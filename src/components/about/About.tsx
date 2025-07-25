@@ -1,9 +1,5 @@
-import React from "react";
 import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa6";
-
-interface Props {
-  description: string;
-}
+import cv from "../../assets/cv-NarelaRCamara.pdf";
 
 export const About = () => {
   const description_split = [
@@ -15,11 +11,16 @@ export const About = () => {
   return (
     <>
       <div className="flex flex-col w-full text-center lg:text-start">
-        <b className="text-3xl pb-3 font-fraunces">Hola! Mi nombre es Narela</b>
+        <b className="text-3xl pb-3 font-[Fraunces] text-[#FFFF]">
+          Hola! Mi nombre es Narela
+        </b>
         <div className="flex flex-col justify-start w-full  text-[#6C7289] text-sm  ">
           {description_split.map((e: string) => {
             return (
-              <p key={e} className={`  text-base justify-start pb-8`}>
+              <p
+                key={e}
+                className={`font-[Montserrat]  text-base justify-start pb-8`}
+              >
                 {e}
               </p>
             );
@@ -28,17 +29,17 @@ export const About = () => {
         <div className="flex flex-col lg:flex-row align-middle justify-center">
           <div className="p-2">
             <a
-              href="/cv-NarelaRCamara.pdf"
+              href={cv}
               download="cv-NarelaCamara.pdf"
               rel="noopener noreferrer"
             >
               <button
                 type="button"
-                className="font-monserrat text-white bg-gray-700 hover:focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:text-start inline-flex items-center me-2  dark:hover:bg-gray-700 dark:focus:ring-blue-800"
+                className="font-[Montserrat] text-white bg-gray-700 hover:focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:text-start inline-flex items-center me-2  dark:hover:bg-gray-700 dark:focus:ring-blue-800"
               >
                 <FaDownload
                   size="1.5rem"
-                  className="w-3.5 h-3.5 me-2 font-monserrat"
+                  className="w-3.5 h-3.5 me-2 font-[Montserrat]"
                 />
                 Descarga CV
               </button>
@@ -54,7 +55,7 @@ export const About = () => {
                 );
               }}
               type="button"
-              className="font-monserrat text-white bg-gray-700 hover:focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:text-start inline-flex items-center me-2  dark:hover:bg-gray-700 dark:focus:ring-blue-800"
+              className="font-[Montserrat] text-white bg-gray-700 hover:focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:text-start inline-flex items-center me-2  dark:hover:bg-gray-700 dark:focus:ring-blue-800"
             >
               <FaLinkedin size="1.5rem" className="w-3.5 h-3.5 me-2" />
               Linkedin
@@ -67,7 +68,7 @@ export const About = () => {
               onClick={() => {
                 window.open("https://github.com/NarelaCamara", "_blank");
               }}
-              className="font-monserrat text-white bg-gray-700 hover:focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:text-start inline-flex items-center me-2  dark:hover:bg-gray-700 dark:focus:ring-blue-800"
+              className="font-[Montserrat] text-white bg-gray-700 hover:focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:text-start inline-flex items-center me-2  dark:hover:bg-gray-700 dark:focus:ring-blue-800"
             >
               <FaGithub size="1.5rem" className="w-3.5 h-3.5 me-2" />
               Git hub

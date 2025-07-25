@@ -1,9 +1,6 @@
-import React from "react";
 import { Card } from "../card/Card";
 
-interface Props {}
-
-export const Experiencie = (props: Props) => {
+export const Experiencie = () => {
   const experiencia = [
     {
       title: "Senior Frontend developer, Accenture",

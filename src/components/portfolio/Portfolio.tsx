@@ -1,11 +1,6 @@
-import Image from "next/image";
-import React from "react";
-import { GoArrowUpRight, GoChevronRight } from "react-icons/go";
 import { Card } from "../card/Card";
 
-interface Props {}
-
-export const Portfolio = (props: Props) => {
+export const Portfolio = () => {
   const proyectos = [
     {
       title: "Challenge Aerolab",
@@ -15,7 +10,6 @@ export const Portfolio = (props: Props) => {
         git: "https://github.com/NarelaCamara/frontend-developer-coding-challenge",
         web: "https://frontend-developer-coding-challenge-mu.vercel.app/",
       },
-      image: "/computer.jpg",
     },
 
     {
@@ -27,7 +21,6 @@ export const Portfolio = (props: Props) => {
         git: "https://github.com/NarelaCamara/drawjs.git",
         web: "https://drawjs.vercel.app/",
       },
-      image: "/computer.jpg",
     },
 
     {
@@ -39,7 +32,6 @@ export const Portfolio = (props: Props) => {
         git: "https://github.com/NarelaCamara/nodejs.git",
         web: "https://www.linkedin.com/in/narelacamara/",
       },
-      image: "/computer.jpg",
     },
   ];
 
@@ -49,7 +41,6 @@ export const Portfolio = (props: Props) => {
         <Card
           key={e.title}
           links={e.links}
-          image={e.image}
           title={e.title}
           description={e.description}
           tecnologies={e.tecnologies}

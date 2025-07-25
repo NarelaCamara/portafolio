@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 interface Props {
   children: any;
@@ -7,13 +8,22 @@ interface Props {
 }
 
 export const Section = ({ title, children }: Props) => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(`.${title}`, {
+    scrollTrigger: `.${title}`,
+    opacity: 1,
+    y: 0,
+    duration: 5,
+    ease: "power2.out",
+  });
+
   return (
     <section
-      id={title}
-      className={`md:h-screen relative top-[15vh] max-w-[750px]`}
+      className={`${title} relative top-[15vh] max-w-[750px] h-full bg-slate-900`}
     >
       {
-        <p className="my-4 font-bold font-fraunces text-2xl text-center lg:text-start lg:text-4xl">
+        <p className="text-[#FFFF] my-4 font-bold font-[Fraunces] text-2xl text-center lg:text-start lg:text-4xl">
           {title}
         </p>
       }
