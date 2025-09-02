@@ -1,33 +1,18 @@
-"use client";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 interface Props {
   children: any;
   title: string;
 }
 
 export const Section = ({ title, children }: Props) => {
-  gsap.registerPlugin(ScrollTrigger);
-
-  gsap.to(`.${title}`, {
-    scrollTrigger: `.${title}`,
-    opacity: 1,
-    y: 0,
-    duration: 5,
-    ease: "power2.out",
-  });
-
   return (
-    <section
-      className={`${title} relative top-[15vh] max-w-[750px] h-full bg-slate-900`}
-    >
-      {
-        <p className="text-[#FFFF] my-4 font-bold font-[Fraunces] text-2xl text-center lg:text-start lg:text-4xl">
+    <div className="min-h-screen w-full relative top-[15%] pt-[15%]">
+      <section id={title} className={`m-8`}>
+        <h2 className="text-[#FFFF] my-4 font-bold font-[Fraunces] text-2xl text-center">
           {title}
-        </p>
-      }
-      <div className="my-2">{children}</div>
-    </section>
+        </h2>
+        <div className="my-2">{children}</div>
+      </section>
+    </div>
   );
 };

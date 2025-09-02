@@ -1,4 +1,4 @@
-import gsap from "gsap";
+import "./App.css";
 import {
   About,
   Education,
@@ -14,13 +14,14 @@ function App() {
       children: <About />,
       title: "Acerca de mi",
     },
-    {
-      children: <Portfolio />,
-      title: "Portfolio",
-    },
+
     {
       children: <Experiencie />,
       title: "Experiencia",
+    },
+    {
+      children: <Portfolio />,
+      title: "Portfolio",
     },
     {
       children: <Education />,
@@ -28,28 +29,16 @@ function App() {
     },
   ];
 
-  gsap.from(".hero", { opacity: 1, y: 0, duration: 1 });
-
   return (
-    <div className="bg-slate-900 hero">
-      <main className="hero">
-        <div className="bg-black p-4 hidden">
-          <div className="font-[Fraunces] text-9xl  p-4 m-16 text-black font-medium bg-white  border-2 border-white w-fit">
-            NC
-          </div>
-        </div>
-        <div className=" lg:grid lg:grid-cols-3 lg:grid-rows-2 min-w-[300px]">
-          <div className="lg:row-span-2 lg:sticky lg:self-center">
-            <Sidebar items={ITEMS} />
-          </div>
-
-          <div className="lg:col-span-2 lg:row-span-2 m-8 lg:space-y-12 max-w-[1000px] lg:h-screen ">
-            {ITEMS.map((e) => (
-              <Section {...e} key={e.title} />
-            ))}
-          </div>
-        </div>
-      </main>
+    <div className="bg-slate-900 flex flex-nowrap flex-col items-center">
+      <div className="h-screen  min-w-[300px] max-w-[960px] ">
+        <Sidebar items={ITEMS} />
+      </div>
+      <div className="min-w-[300px] max-w-[900px]">
+        {ITEMS.map((e) => (
+          <Section {...e} key={e.title} />
+        ))}
+      </div>
     </div>
   );
 }

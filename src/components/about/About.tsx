@@ -10,11 +10,11 @@ export const About = () => {
   ];
   return (
     <>
-      <div className="flex flex-col w-full text-center lg:text-start">
+      <div className="flex flex-col w-full text-center">
         <b className="text-3xl pb-3 font-[Fraunces] text-[#FFFF]">
           Hola! Mi nombre es Narela
         </b>
-        <div className="flex flex-col justify-start w-full  text-[#6C7289] text-sm  ">
+        <div className="flex flex-col justify-start w-full  text-[#6C7289] text-sm">
           {description_split.map((e: string) => {
             return (
               <p
@@ -25,8 +25,8 @@ export const About = () => {
               </p>
             );
           })}
-        </div>
-        <div className="flex flex-col lg:flex-row align-middle justify-center">
+        </div>        
+        <div className="flex flex-col align-middle justify-center">
           <div className="p-2">
             <a
               href={cv}
@@ -35,7 +35,7 @@ export const About = () => {
             >
               <button
                 type="button"
-                className="font-[Montserrat] text-white bg-gray-700  font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:text-start inline-flex items-center me-2"
+                className="font-[Montserrat] text-white bg-gray-700  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2"
               >
                 <FaDownload
                   size="1.5rem"
@@ -55,7 +55,7 @@ export const About = () => {
                 );
               }}
               type="button"
-              className="font-[Montserrat] text-white bg-gray-700  font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:text-start inline-flex items-center me-2"
+              className="font-[Montserrat] text-white bg-gray-700  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2"
             >
               <FaLinkedin size="1.5rem" className="w-3.5 h-3.5 me-2" />
               Linkedin
@@ -68,7 +68,7 @@ export const About = () => {
               onClick={() => {
                 window.open("https://github.com/NarelaCamara", "_blank");
               }}
-              className="font-[Montserrat] text-white bg-gray-700  font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:text-start inline-flex items-center me-2"
+              className="font-[Montserrat] text-white bg-gray-700  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2"
             >
               <FaGithub size="1.5rem" className="w-3.5 h-3.5 me-2" />
               Git hub

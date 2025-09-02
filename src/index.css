@@ -3,3 +3,8 @@
 :root {
   background-color: #0f172b;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 15vh; /* deja espacio arriba para que la sección quede centrada */
+}
