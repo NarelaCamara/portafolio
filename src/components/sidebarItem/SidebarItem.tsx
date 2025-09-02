@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 
 interface Props {
   title: string;
@@ -13,8 +13,27 @@ export const SidebarItem = ({ title }: Props) => {
       });
     }, []);
   }
-
   const scrollToSection = useScrollToSection();
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+
+    const handleChange = (e: MediaQueryListEvent | MediaQueryList) => {
+      if (e.matches && title.toLowerCase() === "acerca de mi") {
+        scrollToSection(title);
+      }
+    };
+
+    // Ejecutar al montar si ya estamos en desktop
+    handleChange(mediaQuery);
+
+    // Escuchar cuando cambia el tamaño de la pantalla
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, [title, scrollToSection]);
 
   return (
     <div className=" ">
