@@ -31,19 +31,16 @@ export const SidebarItem = ({ title }: Props) => {
     mediaQuery.addEventListener("change", handleChange);
 
     return () => {
-      mediaQuery.removeEventListener("change", handleChange);
+       mediaQuery.removeEventListener("change", handleChange);
     };
   }, [title, scrollToSection]);
 
   return (
-    <div className=" ">
-      <a onClick={() => scrollToSection(title)} className="text-center">
-        <span
-          className={`text-[#6C7289] font-[Montserrat]  font-medium items-stretch p-3 rounded-lg text-start leading-tight  inline-block  text-sm transition-all duration-[0.5s] transform-gpu hover:font-bold hover:scale-100 hover:translate-y-[-10px]`}
-        >
-          {title}
-        </span>
-      </a>
-    </div>
+    <span
+      onClick={() => scrollToSection(title)}
+      className="text-center lg:text-start  text-[#6C7289] font-[Montserrat]  font-medium items-stretch p-3 rounded-lg leading-tight  inline-block  text-sm transition-all duration-[0.5s] transform-gpu hover:font-bold hover:scale-100 hover:translate-y-[-10px]"
+    >
+      {title}
+    </span>
   );
 };
