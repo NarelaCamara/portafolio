@@ -36,7 +36,7 @@ function App() {
         <Nav />
       </div>
 
-      <div className=" lg:max-w-max fixed bottom-0 md:bottom-auto md:top-0 lg:left-[10vw]  flex flex-row items-center lg:flex-col  lg:top-[62%]  justify-center py-2 bg-[#0f172b] z-30 lg:z-0">
+      <div className="fixed bottom-0 md:bottom-auto md:top-0 lg:left-[10vw]  flex flex-row items-center lg:flex-col  lg:top-[62%]  justify-center py-2 bg-[#0f172b] z-30 lg:z-0">
         {ITEMS.map((e) => (
           <SidebarItem key={e.title} title={e.title} />
         ))}
