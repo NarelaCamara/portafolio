@@ -6,7 +6,7 @@ interface Props {
 
 export const Section = ({ title, children }: Props) => {
   return (
-    <div className="min-h-screen max-lg:h-[1024px] w-full relative top-[15%] pt-[15%]">
+    <div className="min-h-screen w-full relative top-[15%] pt-[15%]">
       <section id={title} className={`m-8`}>
         <h2 className="text-[#FFFF] my-4 font-bold font-[Fraunces] text-2xl text-center">
           {title}
