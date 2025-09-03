@@ -31,7 +31,7 @@ function App() {
   ];
 
   return (
-    <div className="bg-slate-900 flex flex-nowrap flex-col lg:flex-row items-center lg:max-w-min">
+    <div className="bg-slate-900 flex flex-nowrap flex-col lg:flex-row items-center">
       <div className="relative h-screen lg:h-fit lg:fixed top-[15vh] lg:left-[3vw]">
         <Nav />
       </div>
@@ -41,7 +41,7 @@ function App() {
           <SidebarItem key={e.title} title={e.title} />
         ))}
       </div>
-      <div className=" lg:relative lg:left-[40vw]">
+      <div className="lg:max-w-min lg:relative lg:left-[40vw]">
         {ITEMS.map((e) => (
           <Section {...e} key={e.title} />
         ))}
