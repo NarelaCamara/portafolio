@@ -46,13 +46,13 @@ function App() {
       {/* Contenedor centrado con ancho máximo */}
       <div className="w-full max-w-[1204px] mx-auto flex flex-col lg:flex-row relative">
         {/* NAV + SIDEBAR en desktop */}
-        <div className="hidden lg:flex lg:fixed lg:inset-y-0 lg:left-0 lg:w-[20%] flex-col items-center justify-center space-y-6">
+        <div className="hidden lg:flex lg:fixed lg:inset-y-0 lg:left-0 lg:w-[30%] flex-col items-stretch justify-center space-y-6">
           {/* NAV */}
           <div className="p-4 bg-slate-900">
             <Nav />
           </div>
           {/* SIDEBAR */}
-          <div className="flex flex-col items-center justify-center py-2 bg-[#0f172b] z-30">
+          <div className="flex flex-col items-center justify-center  bg-[#0f172b] z-30">
             {ITEMS.map((e) => (
               <SidebarItem key={e.title} title={e.title} />
             ))}
@@ -60,7 +60,7 @@ function App() {
         </div>
 
         {/* SECTIONS */}
-        <div className="w-full lg:w-[80%] lg:ml-[20%] px-4 md:px-8">
+        <div className="w-full lg:w-[70%] lg:ml-[30%] px-4 md:px-8">
           {ITEMS.map((e) => (
             <Section {...e} key={e.title} />
           ))}
