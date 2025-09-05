@@ -8,3 +8,18 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 15vh; /* deja espacio arriba para que la sección quede centrada */
 }
+
+html,
+body {
+  min-width: 600px;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100vh;
+  /* Asegura que ocupe toda la altura de la pantalla */
+  display: flex;
+  align-items: flex-start;
+  /* Alinea al inicio (top) verticalmente */
+  justify-content: center;
+  /* Centra horizontalmente */
+  position: relative;
+}
