@@ -12,7 +12,6 @@ interface Props {
 
 export const Card = ({
   links,
-
   title,
   subTitle,
   description,
@@ -30,13 +29,13 @@ export const Card = ({
         onClick={() => onClickShowMore()}
       >
         {subTitle && (
-          <span className=" text-[#FFFF] text-lg font-bold top-4 text-center">
+          <h2 className=" text-[#FFFF] text-lg font-bold top-4 text-center">
             {subTitle}
-          </span>
+          </h2>
         )}
-        <span className="text-[#FFFF] my-4 font-bold text-xl text-center flex flex-row justify-center  align-middle font-[Montserrat]">
+        <h2 className="text-[#FFFF] my-4 font-bold text-xl text-center flex flex-row justify-center  align-middle font-[Montserrat]">
           {title}
-        </span>
+        </h2>
         {links && (
           <div
             className="rounded-md shadow-xs mx-2 flex flex-row justify-center  align-middle"

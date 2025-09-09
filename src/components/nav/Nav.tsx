@@ -17,8 +17,8 @@ export const Nav = () => {
       // Crea un selector scoped al contenedor
       const q = gsap.utils.selector(navigation.current);
 
-      // Selecciona todos los elementos h1 dentro del contenedor
-      const paragraphs = q("h1");
+      // Selecciona todos los elementos h2 dentro del contenedor
+      const paragraphs = q("h2");
 
       const split = SplitText.create(paragraphs, { type: "words,chars" });
       //now animate each character into place from 20px below, fading in:
@@ -40,21 +40,21 @@ export const Nav = () => {
         className="rounded-full border-2  border-[#6C7289] h-[256px] w-[256px]"
         src={nare}
       />
-      <h1
+      <h2
         className={`text-[#FFFF] text-center  text-4xl font-extrabold mb-4 font-[Fraunces] my-2`}
       >
         Narela Camara
-      </h1>
-      <h1
+      </h2>
+      <h2
         className={`text-[#FFFF] text-center  text-xl   mb-4 font-[Montserrat] tracking-[0.5rem]`}
       >
         Frontend developer
-      </h1>
-      <h1
+      </h2>
+      <h2
         className={`  mb-4 font-[Montserrat] text-[#6C7289] text-center     text-xs tracking-[0.5rem]`}
       >
         Next | React | Node
-      </h1>
+      </h2>
     </div>
   );
 };
