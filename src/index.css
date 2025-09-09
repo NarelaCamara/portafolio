@@ -11,8 +11,8 @@ html {
 
 html,
 body {
-  min-width: 600px;
-  max-width: 1280px;
+  min-width: 200px;
+  max-width: 10240px;
   margin: 0 auto;
   height: 100vh;
   /* Asegura que ocupe toda la altura de la pantalla */

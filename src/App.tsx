@@ -31,9 +31,9 @@ function App() {
   ];
 
   return (
-    <div className="bg-slate-900 w-full min-h-screen flex flex-col lg:flex-row items-center">
+    <div className="bg-slate-900 min-w-[200px] max-w-[1280px] flex flex-col lg:flex-row items-center">
       {/* Vista mobile */}
-      <div className="max-lg:block hidden relative  lg:h-fit">
+      <div className="h-screen pt-[100px] max-lg:block hidden relative lg:h-fit">
         <Nav />
       </div>
 
