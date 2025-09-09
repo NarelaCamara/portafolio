@@ -4,18 +4,18 @@ import { SplitText } from "gsap/all";
 import gsap from "gsap";
 
 export const Nav = () => {
-  const checkList = useRef(null);
+  const navigation = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(SplitText);
 
-    gsap.set(checkList.current, { opacity: 1 });
+    gsap.set(navigation.current, { opacity: 1 });
 
-    if (checkList.current) {
+    if (navigation.current) {
       gsap.registerPlugin(SplitText);
 
       // Crea un selector scoped al contenedor
-      const q = gsap.utils.selector(checkList.current);
+      const q = gsap.utils.selector(navigation.current);
 
       // Selecciona todos los elementos h1 dentro del contenedor
       const paragraphs = q("h1");
@@ -32,7 +32,7 @@ export const Nav = () => {
 
   return (
     <div
-      ref={checkList}
+      ref={navigation}
       className={`flex flex-col items-center justify-center  `}
     >
       <img
