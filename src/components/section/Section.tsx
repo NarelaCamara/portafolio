@@ -1,6 +1,7 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+import { type ReactElement } from "react";
+
 interface Props {
-  children: any;
+  children: ReactElement | ReactElement[];
   title: string;
 }
 
