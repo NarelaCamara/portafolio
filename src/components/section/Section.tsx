@@ -16,32 +16,43 @@ export const Section = ({ title, children }: Props) => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       if (cardRef.current && textRef.current) {
+        // Estado inicial oculto
+        gsap.set([cardRef.current, textRef.current], { opacity: 0 });
+
         // Animación del contenedor
-        gsap.from(cardRef.current, {
-          scrollTrigger: {
-            trigger: cardRef.current,
-            start: "top 80%",
-            toggleActions: "restart restart restart restart", // ✅ se reinicia siempre
-          },
-          scale: 0.8,
-          opacity: 0,
-          duration: 0.8,
-          ease: "power3.out",
-        });
+        gsap.fromTo(
+          cardRef.current,
+          { scale: 0.8, opacity: 0 },
+          {
+            scale: 1,
+            opacity: 1,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: cardRef.current,
+              start: "top 75%", // ✅ aparece cuando entra en el 25% inferior del viewport
+              toggleActions: "restart none restart none", // ✅ se repite arriba y abajo
+            },
+          }
+        );
 
         // Animación del texto
-        gsap.from(textRef.current, {
-          scrollTrigger: {
-            trigger: cardRef.current,
-            start: "top 80%",
-            toggleActions: "restart restart restart restart",
-          },
-          y: 40,
-          opacity: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          delay: 0.3,
-        });
+        gsap.fromTo(
+          textRef.current,
+          { y: 40, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            delay: 0.3,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: cardRef.current,
+              start: "top 75%",
+              toggleActions: "restart none restart none",
+            },
+          }
+        );
       }
     });
 
