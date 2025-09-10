@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import { SplitText } from "gsap/all";
+import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef, type ReactElement } from "react";
 
 interface Props {
@@ -7,39 +7,50 @@ interface Props {
   title: string;
 }
 
+gsap.registerPlugin(ScrollTrigger);
+
 export const Section = ({ title, children }: Props) => {
-  const navigation = useRef(null);
+  const cardRef = useRef<HTMLDivElement | null>(null);
+  const textRef = useRef<HTMLParagraphElement | null>(null);
 
   useEffect(() => {
-    gsap.registerPlugin(SplitText);
+    const ctx = gsap.context(() => {
+      if (cardRef.current && textRef.current) {
+        // Animación del contenedor
+        gsap.from(cardRef.current, {
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: "top 80%",
+            toggleActions: "restart restart restart restart", // ✅ se reinicia siempre
+          },
+          scale: 0.8,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power3.out",
+        });
 
-    gsap.set(navigation.current, { opacity: 1 });
+        // Animación del texto
+        gsap.from(textRef.current, {
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: "top 80%",
+            toggleActions: "restart restart restart restart",
+          },
+          y: 40,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          delay: 0.3,
+        });
+      }
+    });
 
-    if (navigation.current) {
-      gsap.registerPlugin(SplitText);
-
-      // Crea un selector scoped al contenedor
-      const q = gsap.utils.selector(navigation.current);
-
-      // Selecciona todos los elementos h2 dentro del contenedor
-      const paragraphs = [...q("p"), ...q("h2")];
-
-      const split = SplitText.create(paragraphs, { type: "words,chars" });
-      //now animate each character into place from 20px below, fading in:
-      gsap.from(split.chars, {
-        y: 20,
-        autoAlpha: 0,
-        stagger: 0.01,
-      });
-    }
+    return () => ctx.revert();
   }, []);
 
   return (
-    <div
-      ref={navigation}
-      className="min-h-screen   relative top-[15%] pt-[15%]"
-    >
-      <section id={title} className={`m-8`}>
+    <div ref={cardRef} className="min-h-screen   relative top-[15%] pt-[15%]">
+      <section ref={textRef} id={title} className={`m-8`}>
         <h2 className="text-[#FFFF] my-4 font-bold font-[Fraunces] text-2xl text-center">
           {title}
         </h2>
