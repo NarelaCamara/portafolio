@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Chip } from "../chip/Chip";
 import { FaGithub, FaGlobe } from "react-icons/fa6";
 
@@ -17,17 +16,9 @@ export const Card = ({
   description,
   tecnologies,
 }: Props) => {
-  const [showAll, setshowAll] = useState(false);
-  const onClickShowMore = () => {
-    setshowAll(!showAll);
-  };
-
   return (
     <div className="my-4">
-      <section
-        className="m-2 flex flex-col justify-center align-middle"
-        onClick={() => onClickShowMore()}
-      >
+      <section className="m-2 flex flex-col justify-center align-middle">
         {subTitle && (
           <h2 className=" text-[#FFFF] text-lg font-bold top-4 text-center">
             {subTitle}
@@ -67,16 +58,14 @@ export const Card = ({
         <p
           className={`my-3 text-[#6C7289] text-sm text-center justify-start font-[Montserrat]`}
         >
-          {description.map((e, index) => {
-            if (showAll || index === 0) {
-              return (
-                <span key={e}>
-                  {e}
-                  <br />
-                  <br />
-                </span>
-              );
-            }
+          {description.map((e) => {
+            return (
+              <span key={e}>
+                {e}
+                <br />
+                <br />
+              </span>
+            );
           })}
         </p>
         <div className="flex flex-row flex-wrap  justify-center  align-middle font-[Montserrat] py-4 ">

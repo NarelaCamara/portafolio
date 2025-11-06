@@ -60,7 +60,7 @@ export const Section = ({ title, children }: Props) => {
   }, []);
 
   return (
-    <div ref={cardRef} className="min-h-screen   relative top-[15%] pt-[15%]">
+    <div ref={cardRef} className="min-h-screen relative top-[15vh]">
       <section ref={textRef} id={title} className={`m-8`}>
         <h2 className="text-[#FFFF] my-4 font-bold font-[Fraunces] text-2xl text-center">
           {title}
