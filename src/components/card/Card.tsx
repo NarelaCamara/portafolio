@@ -24,7 +24,7 @@ export const Card = ({
             {subTitle}
           </h2>
         )}
-        <h2 className="text-[#FFFF] my-4 font-bold text-xl text-center flex flex-row justify-center  align-middle font-[Montserrat]">
+        <h2 className="text-[#FFFF] text-center  text-xl   mb-4 font-[Montserrat] my-4 font-bold  flex flex-row justify-center  align-middle ">
           {title}
         </h2>
         {links && (
@@ -60,7 +60,7 @@ export const Card = ({
         >
           {description.map((e) => {
             return (
-              <span key={e}>
+              <span className="font-[Montserrat]" key={e}>
                 {e}
                 <br />
                 <br />
