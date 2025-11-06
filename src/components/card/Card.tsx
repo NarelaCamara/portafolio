@@ -55,19 +55,20 @@ export const Card = ({
             </button>
           </div>
         )}
-        <p
-          className={`my-3 text-[#6C7289] text-sm text-center justify-start font-[Montserrat]`}
-        >
-          {description.map((e) => {
-            return (
-              <span className="font-[Montserrat]" key={e}>
-                {e}
-                <br />
-                <br />
-              </span>
-            );
-          })}
-        </p>
+
+        {description.map((e) => {
+          return (
+            <span
+              className={`my-3 text-[#6C7289] text-sm text-center justify-start font-[Montserrat]`}
+              key={e}
+            >
+              {e}
+              <br />
+              <br />
+            </span>
+          );
+        })}
+
         <div className="flex flex-row flex-wrap  justify-center  align-middle font-[Montserrat] py-4 ">
           {tecnologies && tecnologies.map((e) => <Chip key={e} text={e} />)}
         </div>
