@@ -5,8 +5,10 @@ export const Education = () => {
     {
       title: "Universidad Nacional de Quilmes",
       subTitle: " 2018 - actualidad",
-      description:
-        "Actualmente me encuentro estudiando la Tecnicatura en Desarrollo de Software",
+      description: [
+        `Durante la carrera he adquirido una sólida formación en los fundamentos del desarrollo de software, abarcando temas como programación orientada a objetos, patrones de diseño, bases de datos relacionales, SQL, estructuras de datos (listas y grafos) y Test Driven Development (TDD).`,
+        `Estos conocimientos me han permitido fortalecer mi base técnica y metodológica, favoreciendo un enfoque estructurado y de calidad en el desarrollo de soluciones de software. `,
+      ],
       tecnologies: ["POO", "Patrones de diseño", "SQL", "TDD"],
     },
   ];

@@ -1,13 +1,7 @@
 import "./App.css";
-import {
-  About,
-  Education,
-  Experiencie,
-  Nav,
-  Portfolio,
-  Section,
-  SidebarItem,
-} from "./components";
+import { About, Nav, Portfolio, Section, SidebarItem } from "./components";
+import { CareerPath } from "./components/career_path/career_path";
+import { Contact } from "./components/contact/contact";
 
 function App() {
   const ITEMS = [
@@ -17,26 +11,26 @@ function App() {
     },
 
     {
-      children: <Experiencie />,
-      title: "Experiencia",
+      children: <CareerPath />,
+      title: "Trayectoria",
     },
     {
       children: <Portfolio />,
-      title: "Portfolio",
+      title: "Portafolio",
     },
     {
-      children: <Education />,
-      title: "Educación",
+      children: <Contact />,
+      title: "Contacto",
     },
   ];
 
   return (
     <div className="bg-slate-900 min-w-[200px] max-w-[1280px] flex flex-col lg:flex-row items-center">
-      {/* Vista mobile */}
+      {/* Vista mobile / tablet */}
       <div className="h-screen pt-[100px] max-lg:block hidden relative lg:h-fit">
         <Nav />
       </div>
-
+      {/* Vista mobile / tablet */}
       <div className="max-lg:block hidden fixed bottom-0 md:bottom-auto md:top-0 flex flex-row items-center justify-center py-2 bg-[#0f172b] z-30">
         {ITEMS.map((e) => (
           <SidebarItem key={e.title} title={e.title} />

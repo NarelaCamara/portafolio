@@ -19,7 +19,7 @@ export const About = () => {
             return (
               <p
                 key={e}
-                className={`font-[Montserrat]  text-base justify-start pb-8`}
+                className={`font-[Montserrat] text-sm justify-start pb-8`}
               >
                 {e}
               </p>

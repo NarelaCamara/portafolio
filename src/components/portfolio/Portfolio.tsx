@@ -4,7 +4,7 @@ export const Portfolio = () => {
   const proyectos = [
     {
       title: "Challenge Aerolab",
-      description: "Aplicamos lo pedido para Challenge de Aerolab.",
+      description: ["Aplicamos lo pedido para Challenge de Aerolab."],
       tecnologies: ["Next js", "Tailwind CSS"],
       links: {
         git: "https://github.com/NarelaCamara/frontend-developer-coding-challenge",
@@ -14,8 +14,9 @@ export const Portfolio = () => {
 
     {
       title: "Codificación creativa: crea piezas visuales con JavaScript",
-      description:
+      description: [
         "Aplicacion de los aprendido en el curso Codificación creativa: crea piezas visuales con JavaScript. Aprendimos a diseñar composiciones artísticas únicas utilizando Canvas.",
+      ],
       tecnologies: ["Canva", "Vite"],
       links: {
         git: "https://github.com/NarelaCamara/drawjs.git",
@@ -25,8 +26,9 @@ export const Portfolio = () => {
 
     {
       title: "Legacy - Node: De cero a experto",
-      description:
+      description: [
         "Aplicacion de lo aprendido del curso: Legacy - Node: De cero a experto por Fernando Herrera",
+      ],
       tecnologies: ["Nodemon", "Express", "Mongo", "JWT"],
       links: {
         git: "https://github.com/NarelaCamara/nodejs.git",

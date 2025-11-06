@@ -6,7 +6,7 @@ interface Props {
   links?: { web: string; git: string };
   subTitle?: string;
   title: string;
-  description: string;
+  description: Array<string>;
   tecnologies: Array<string>;
 }
 
@@ -46,7 +46,7 @@ export const Card = ({
               onClick={() => {
                 window.open(links.git, "_blank");
               }}
-              className="font-[Montserrat] inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700  focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+              className="font-[Montserrat] inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-gray-700  focus:ring-2 focus:ring-gray-600 focus:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-500 dark:focus:text-white"
             >
               <FaGithub size="3rem" className="w-3 h-3 me-2" />
               Git hub
@@ -57,7 +57,7 @@ export const Card = ({
               onClick={() => {
                 window.open(links.web, "_blank");
               }}
-              className="font-[Montserrat] inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700  focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+              className="font-[Montserrat] inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-gray-700  focus:ring-2 focus:ring-gray-600 focus:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-500 dark:focus:text-white"
             >
               <FaGlobe size="2rem" className="w-3 h-3 me-2" />
               Web
@@ -67,7 +67,17 @@ export const Card = ({
         <p
           className={`my-3 text-[#6C7289] text-sm text-center justify-start font-[Montserrat]`}
         >
-          {description}
+          {description.map((e, index) => {
+            if (showAll || index === 0) {
+              return (
+                <span key={e}>
+                  {e}
+                  <br />
+                  <br />
+                </span>
+              );
+            }
+          })}
         </p>
         <div className="flex flex-row flex-wrap  justify-center  align-middle font-[Montserrat] py-4 ">
           {tecnologies && tecnologies.map((e) => <Chip key={e} text={e} />)}
