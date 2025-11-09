@@ -23,3 +23,16 @@ body {
   /* Centra horizontalmente */
   position: relative;
 }
+
+.custom-resize-handle::-webkit-resizer {
+  /* color: Puedes usar cualquier color, por ejemplo, un gris de Tailwind */
+
+  display: hidden;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin; /* o 'auto' */
+  scrollbar-color: #1e2939 #1e2939; /* gray-700 (thumb) gray-300 (track) */
+  border-radius: 12px;
+  /* El borde es para asegurar que el color del thumb sea visible si el track es transparente */
+}
